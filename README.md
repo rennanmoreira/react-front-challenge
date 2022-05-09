@@ -21,7 +21,7 @@ A forma de entregar o projeto deve ser feita pelo GitHub, através do processo d
 * Crie uma branch com o nome *teste-front-end-SEUNOME*;
 * Faça um commit da sua branch;
 * Dê um pull request da sua branch;
-* Avise-nos por e-mail que o pull request foi feito (rtapia@haoc.com.br);
+* Avise-nos por e-mail que o pull request foi feito (ligiavalle@cannect.com.br);
 * Entregar um arquivo md com um descritivo passo-a-passo (simples) de como executar a aplicação.
 
 ## Quais tecnologias você pode utilizar?
