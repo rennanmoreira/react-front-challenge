@@ -55,6 +55,6 @@ Seria muito interessante se você pudesse trabalhar com algumas das tecnologias 
 * Implementação de uma RestAPI para receber conteúdo de um dos formulários do projeto - [JSON Placeholder](https://jsonplaceholder.typicode.com/);
 * Funcionalidades/tecnologias extras no geral serão sempre bem-vindas, desde que explicadas e bem codadas.
 
-Caso tenha ficado alguma dúvida entre em contato com [ligiavalle@cannect.com.br](mailto:ligiavalle@cannect.com.br).
+Caso tenha ficado alguma dúvida entre em contato com [rafaelbiton@cannect.com.br](mailto:rafaelbiton@cannect.com.br).
 
 console.log('Boa sorte!')
