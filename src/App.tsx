@@ -4,8 +4,8 @@ import viteLogo from '/vite.svg'
 import styled from 'styled-components'
 import './App.scss'
 
-const H1 = styled.h1<{red?: boolean}>`
-  color:  ${({red}) => (red && 'red') || '#645cfc'};
+const H1 = styled.h1<{ red?: boolean }>`
+  color: ${({ red }) => (red && 'red') || '#645cfc'};
   font-size: 4rem;
 `
 
@@ -15,10 +15,10 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
