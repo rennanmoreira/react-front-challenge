@@ -6,7 +6,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:prettier/recommended',
     'prettier',
     'prettier/prettier',
@@ -15,8 +15,10 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: { jsx: true },
-    ecmaVersion: 12,
+    ecmaVersion: 'latest',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
     sourceType: 'module',
+    tsconfigRootDir: __dirname,
   },
   plugins: [
     'react',
@@ -42,6 +44,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
+    '@typescript-eslint/no-unsafe-return': 'off',
     quotes: ['error', 'single'],
   },
   settings: {

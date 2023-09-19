@@ -18,14 +18,17 @@
   <a href="https://react.dev/" target="_blank">
     <img src="https://badgen.net/badge/lib/React" alt="React">
   </a>
-  <a href="https://jestjs.io" target="_blank">
-    <img src="https://badgen.net/badge/test/Jest" alt="Jest">
+  <a href="https://vitejs.dev/" target="_blank">
+    <img src="https://badgen.net/badge/builder/Vite" alt="Vite">
+  </a>
+  <a href="https://vitest.dev/" target="_blank">
+    <img src="https://badgen.net/badge/test/Vitest" alt="Vitest">
   </a>
 </p>
 
 ## Descrição
 
-Aplicação web desenvolvida em ReactJS para o projeto Cannect Life.
+Aplicação web desenvolvida em ReactJS construido com o Vite para o [Cannect](https://www.cannect.life/).
 
 ## Tecnologias, bibliotecas e padrões utilizados
 
@@ -44,7 +47,7 @@ Aplicação web desenvolvida em ReactJS para o projeto Cannect Life.
 
  - [TDD](https://pt.wikipedia.org/wiki/Test-driven_development)
  - [PWA](https://web.dev/progressive-web-apps/)
- - [Jest](https://jestjs.io/)
+ - [i18next](https://www.i18next.com/)
  - [Sentry](https://sentry.io/welcome/)
  - [Cypress](https://www.cypress.io/)
  - [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
@@ -54,16 +57,17 @@ Aplicação web desenvolvida em ReactJS para o projeto Cannect Life.
 
  - [ReactJS](https://reactjs.org/)
  - [Vite](https://vitejs.dev/)
+ - [Vitest](https://vitest.dev/)
  - [SWC](https://swc.rs/)
  - [React Router](https://reactrouter.com/)
  - [React Hook Form](https://react-hook-form.com/)
  - [Styled Components](https://styled-components.com/)
- - [i18next](https://www.i18next.com/)
 
   </div>
 </div>
 
 ## Requisitos
+
 <!-- :white_check_mark: -->
 <!-- :white_large_square:  -->
 
@@ -130,7 +134,6 @@ Aplicação web desenvolvida em ReactJS para o projeto Cannect Life.
 
 - Nos desejáveis eu adicionei itens que não foram solicitados, mas que eu acho que seriam mudanças interessantes tanto na interface quanto na experiência do usuário.
 
-
 ## Instalação
 
 ```bash
@@ -163,26 +166,6 @@ $ yarn run test:e2e
 $ yarn run test:cov
 ```
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-
-
 ## Entre em contato
 
 - Author - [Rennan Moreira](https://github.com/rennanmoreira)
@@ -192,7 +175,6 @@ If you are developing a production application, we recommend updating the config
 ## Licença
 
 [MIT licensed](LICENSE).
-
 
 # Cannect Life - Teste Front-End
 
@@ -206,50 +188,50 @@ Atenção: Para a avaliação será necessário desenvolver apenas a HOME, mas c
 
 O tempo ideal para realização da tarefa é de **5 dias**. Também consideramos que, se demorar pouco mais do que isso, mas entregar um projeto melhor estruturado e com tecnologias mais recentes, também será tão válido quanto o de 3 dias.
 
-* Prazo ideal: 5 dias
-* Prazo máximo: 7 dias
+- Prazo ideal: 5 dias
+- Prazo máximo: 7 dias
 
 ## O que você precisará fazer
 
 A forma de entregar o projeto deve ser feita pelo GitHub, através do processo descrito abaixo:
 
-* Clone este repositório para sua máquina;
-* Crie uma branch com o nome *teste-front-end-SEUNOME*;
-* Faça um commit da sua branch;
-* Dê um pull request da sua branch;
-* Avise-nos por e-mail que o pull request foi feito (rafaelbiton@cannect.com.br);
-* Entregar um arquivo md com um descritivo passo-a-passo (simples) de como executar a aplicação.
+- Clone este repositório para sua máquina;
+- Crie uma branch com o nome _teste-front-end-SEUNOME_;
+- Faça um commit da sua branch;
+- Dê um pull request da sua branch;
+- Avise-nos por e-mail que o pull request foi feito (rafaelbiton@cannect.com.br);
+- Entregar um arquivo md com um descritivo passo-a-passo (simples) de como executar a aplicação.
 
 ## Quais tecnologias você pode utilizar?
 
 Você pode escolher uma ou mais tecnologias para a entrega, exceto o framework Javascript, que é requisito que a entrega seja feita em um deles:
 
-* ReactJS;
-* Styled-components para construção do layout;
-* HTML compatível com IE8+, Chrome, Firefox e Safari (Cross-browsing);
-* FontAwesome para ícones e outros elementos gráficos presentes nas páginas;
-* Qualquer outra tecnologia que julgar necessário ou que tiver familiaridade.
+- ReactJS;
+- Styled-components para construção do layout;
+- HTML compatível com IE8+, Chrome, Firefox e Safari (Cross-browsing);
+- FontAwesome para ícones e outros elementos gráficos presentes nas páginas;
+- Qualquer outra tecnologia que julgar necessário ou que tiver familiaridade.
 
 ## O que será avaliado?
 
-* Clareza do código
-* Código 100% responsivo
-* HMTL Limpo, claro e organizado
-* Controle correto das rotas da aplicação
-* Uso correto do Git
-* Conhecimento de JS
-* Testes Unitários (pode usar qualquer tecnologia).
+- Clareza do código
+- Código 100% responsivo
+- HMTL Limpo, claro e organizado
+- Controle correto das rotas da aplicação
+- Uso correto do Git
+- Conhecimento de JS
+- Testes Unitários (pode usar qualquer tecnologia).
 
 ## Pontos extras (diferencial)
 
 Seria muito interessante se você pudesse trabalhar com algumas das tecnologias abaixo (Já que utilizamos todas elas no dia-a-dia)
 
-* Uso de pré-processador HTML  + Modular/Componentizado;
-* Uso de pré-processador CSS (SCSS/SASS, Stylus ou PostCSS) + Modular/Componentizado;
-* Uso de ES6 / ES7;
-* Implementação de chamada para uma RestAPI em qualquer um dos formulários existentes no projeto;
-* Implementação de uma RestAPI para receber conteúdo de um dos formulários do projeto - [JSON Placeholder](https://jsonplaceholder.typicode.com/);
-* Funcionalidades/tecnologias extras no geral serão sempre bem-vindas, desde que explicadas e bem codadas.
+- Uso de pré-processador HTML + Modular/Componentizado;
+- Uso de pré-processador CSS (SCSS/SASS, Stylus ou PostCSS) + Modular/Componentizado;
+- Uso de ES6 / ES7;
+- Implementação de chamada para uma RestAPI em qualquer um dos formulários existentes no projeto;
+- Implementação de uma RestAPI para receber conteúdo de um dos formulários do projeto - [JSON Placeholder](https://jsonplaceholder.typicode.com/);
+- Funcionalidades/tecnologias extras no geral serão sempre bem-vindas, desde que explicadas e bem codadas.
 
 Caso tenha ficado alguma dúvida entre em contato com [rafaelbiton@cannect.com.br](mailto:rafaelbiton@cannect.com.br).
 

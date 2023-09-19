@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import reactLogo from '@/assets/react.svg'
+import viteLogo from '@/assets/vite.svg'
 import styled from 'styled-components'
-import './App.scss'
+import '@/App.scss'
 
 const H1 = styled.h1<{ red?: boolean }>`
   color: ${({ red }) => (red && 'red') || '#645cfc'};
