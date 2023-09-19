@@ -2,10 +2,11 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import styled from 'styled-components'
-import './App.css'
+import './App.scss'
 
-const H1 = styled.h1`
-font-size: 4rem;
+const H1 = styled.h1<{red?: boolean}>`
+  color:  ${({red}) => (red && 'red') || '#645cfc'};
+  font-size: 4rem;
 `
 
 function App() {
