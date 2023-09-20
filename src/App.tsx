@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from '@/assets/react.svg'
 import viteLogo from '@/assets/vite.svg'
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import '@/App.scss'
 
 const H1 = styled.h1<{ red?: boolean }>`
@@ -23,6 +25,7 @@ function App() {
         </a>
       </div>
       <H1>Vite + React</H1>
+      <FontAwesomeIcon icon={faEnvelope} />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
