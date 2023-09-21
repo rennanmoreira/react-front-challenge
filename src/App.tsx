@@ -4,7 +4,8 @@ import viteLogo from '@/assets/vite.svg'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import '@/App.scss'
+import TopBar from './TopBar'
+// import { Button, TomatoButton } from './components/styled'
 
 const H1 = styled.h1<{ red?: boolean }>`
   color: ${({ red }) => (red && 'red') || '#645cfc'};
@@ -16,7 +17,10 @@ function App() {
 
   return (
     <>
-      <div>
+      {/* <Button>Botão Normal</Button> */}
+      {/* <TomatoButton>Botão Tomate</TomatoButton> */}
+      <TopBar />
+      {/* <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -24,7 +28,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <H1>Vite + React</H1>
+      <H1 red>Vite + React</H1>
       <FontAwesomeIcon icon={faEnvelope} />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
@@ -36,7 +40,7 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
     </>
   )
 }
