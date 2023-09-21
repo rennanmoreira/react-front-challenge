@@ -2,10 +2,24 @@
 
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
+import istanbul from 'vite-plugin-istanbul'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    istanbul({
+      cypress: true,
+      requireEnv: false,
+    }),
+  ],
+  build: {
+    sourcemap: true,
+  },
+  server: {
+    host: true,
+    port: 3000,
+  },
   resolve: {
     alias: {
       '@': '/src',
@@ -14,7 +28,11 @@ export default defineConfig({
   test: {
     coverage: {
       provider: 'v8',
-      reportsDirectory: './tests/unit/coverage',
+      reportsDirectory: './tests/coverage',
+      exclude: ['**/node_modules/**', '**/tests/**'],
+      include: ['**/src/**'],
     },
+    globals: true,
+    environment: 'jsdom',
   },
 })

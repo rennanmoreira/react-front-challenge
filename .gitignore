@@ -23,6 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 .env
-yarn.lock
-package-lock.json
-tests/unit/coverage
+tests/coverage
+cypress/coverage
+cypress/coverage/*
+cypress/coverage/lcov-report
+cypress/coverage/lcov-report/*
+cypress/coverage/lcov-report/main.tsx.html
+.nyc_output

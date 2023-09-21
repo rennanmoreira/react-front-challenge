@@ -19,7 +19,7 @@
     <img src="https://badgen.net/badge/lib/React" alt="React">
   </a>
   <a href="https://vitejs.dev/" target="_blank">
-    <img src="https://badgen.net/badge/builder/Vite" alt="Vite">
+    <img src="https://badgen.net/badge/bundler/Vite" alt="Vite">
   </a>
   <a href="https://vitest.dev/" target="_blank">
     <img src="https://badgen.net/badge/test/Vitest" alt="Vitest">
@@ -28,7 +28,7 @@
 
 ## Descrição
 
-Aplicação web desenvolvida em ReactJS construido com o Vite para o [Cannect](https://www.cannect.life/).
+Aplicação web desenvolvida em ReactJS construido com o Vite para empresa [Cannect](https://www.cannect.life/).
 
 ## Tecnologias, bibliotecas e padrões utilizados
 
@@ -42,8 +42,8 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para o [Cannect](h
  - [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5)
  - [TypeScript](https://www.typescriptlang.org/)
  - [FontAwesome](https://fontawesome.com/)
-  </div>
-  <div>
+</div>
+<div>
 
  - [TDD](https://pt.wikipedia.org/wiki/Test-driven_development)
  - [PWA](https://web.dev/progressive-web-apps/)
@@ -52,8 +52,8 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para o [Cannect](h
  - [Cypress](https://www.cypress.io/)
  - [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
  - [SCSS](https://sass-lang.com/)
-  </div>
-  <div>
+</div>
+<div>
 
  - [ReactJS](https://reactjs.org/)
  - [Vite](https://vitejs.dev/)
