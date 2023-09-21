@@ -17,17 +17,18 @@
     "cy:open-unit": "cypress open --component --browser electron"
   },
   "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
+    "sass": "^1.67.0",
+    "styled-components": "^6.0.8"
+  },
+  "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sass": "^1.67.0",
-    "styled-components": "^6.0.8"
-  },
-  "devDependencies": {
     "@cypress/code-coverage": "^3.12.1",
     "@cypress/react18": "^2.0.0",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
@@ -55,7 +56,10 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-istanbul": "^5.0.0",
-    "vitest": "^0.34.4"
+    "vitest": "^0.34.4",
+    "sort-by": "^1.2.0",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1"
   },
   "nyc": {
     "all": true,
