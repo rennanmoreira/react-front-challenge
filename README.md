@@ -6,11 +6,11 @@
 
 <p align="center">Cannect Progressive Web Application (PWA)</p>
 <p align="center">
-  <a href="emailto:rennanmore@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg" alt="Mit License">
+  <a href="emailto:rennan@muda.education" target="_blank">
+    <img src="https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg" alt="contact email">
   </a>
   <a href="https://cannect.life/" target="_blank">
-    <img src="https://img.shields.io/website-up-down-green-red/http/monip.org.svg" alt="Mit License">
+    <img src="https://img.shields.io/website-up-down-green-red/http/monip.org.svg" alt="cannect website">
   </a>
   <a href="https://github.com/MudaBrasil/muda-api/blob/main/LICENSE" target="_blank">
     <img src="https://img.shields.io/github/license/MudaBrasil/muda-web.svg" alt="Mit License">
@@ -22,7 +22,10 @@
     <img src="https://badgen.net/badge/bundler/Vite" alt="Vite">
   </a>
   <a href="https://vitest.dev/" target="_blank">
-    <img src="https://badgen.net/badge/test/Vitest" alt="Vitest">
+    <img src="https://badgen.net/badge/unit test/Vitest" alt="Vitest">
+  </a>
+  <a href="https://cypress.io/" target="_blank">
+    <img src="https://badgen.net/badge/e2e test/Cypress" alt="Cypress">
   </a>
 </p>
 
