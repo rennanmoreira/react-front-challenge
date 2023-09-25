@@ -1,4 +1,4 @@
-import App from '../../src/App'
+import App from '../../src/pages/App'
 import { mount } from '@cypress/react18'
 
 describe('<App>', () => {

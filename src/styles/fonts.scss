@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,500,600,700,800,900,200i,300i,400i,500i,600i,700i,800i,900i&display=swap');
+
 @font-face {
   font-family: Spartan;
   src: url(../assets/fonts/Spartan-Regular.ttf) format(truetype);
@@ -31,4 +33,24 @@
 @font-face {
   font-family: ITC Avant Garde Gothic Std Bk;
   src: url(../assets/fonts/ITCAvantGardeStd-Bk.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: ITC Avant Garde Gothic;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/fonts/ITCAvantGardeGothic-Demi.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: ITC Avant Garde Gothic;
+  font-style: normal;
+  src: url(../assets/fonts/ITCAvantGardeStd-Bk.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: ITC Avant Garde Gothic;
+  font-style: normal;
+  font-weight: 600;
+  src: url(../assets/fonts/ITCAvantGardeStdBold.ttf) format(truetype);
 }

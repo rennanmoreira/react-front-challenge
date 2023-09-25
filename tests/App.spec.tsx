@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { fireEvent, render, screen } from '@testing-library/react'
-import App from '../src/App'
+import App from '../src/pages/App'
 
 const sum = (a, b) => {
   return a + b

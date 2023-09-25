@@ -38,33 +38,33 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para empresa [Cann
 <div style="text-align: left; display: grid; grid-template-columns: 1fr 1fr 1fr;">
   <div>
 
- - [Git](https://git-scm.com/)
- - [Yarn](https://yarnpkg.com/)
- - [ESLint](https://eslint.org/)
- - [Prettier](https://prettier.io/)
- - [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5)
- - [TypeScript](https://www.typescriptlang.org/)
- - [FontAwesome](https://fontawesome.com/)
+- [Git](https://git-scm.com/)
+- [Yarn](https://yarnpkg.com/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5)
+- [TypeScript](https://www.typescriptlang.org/)
+- [FontAwesome](https://fontawesome.com/)
 </div>
 <div>
 
- - [TDD](https://pt.wikipedia.org/wiki/Test-driven_development)
- - [PWA](https://web.dev/progressive-web-apps/)
- - [i18next](https://www.i18next.com/)
- - [Sentry](https://sentry.io/welcome/)
- - [Cypress](https://www.cypress.io/)
- - [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
- - [SCSS](https://sass-lang.com/)
+- [TDD](https://pt.wikipedia.org/wiki/Test-driven_development)
+- [PWA](https://web.dev/progressive-web-apps/)
+- [i18next](https://www.i18next.com/)
+- [Sentry](https://sentry.io/welcome/)
+- [Cypress](https://www.cypress.io/)
+- [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [SCSS](https://sass-lang.com/)
 </div>
 <div>
 
- - [ReactJS](https://reactjs.org/)
- - [Vite](https://vitejs.dev/)
- - [Vitest](https://vitest.dev/)
- - [SWC](https://swc.rs/)
- - [React Router](https://reactrouter.com/)
- - [React Hook Form](https://react-hook-form.com/)
- - [Styled Components](https://styled-components.com/)
+- [ReactJS](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Vitest](https://vitest.dev/)
+- [SWC](https://swc.rs/)
+- [React Router](https://reactrouter.com/)
+- [React Hook Form](https://react-hook-form.com/)
+- [Styled Components](https://styled-components.com/)
 
   </div>
 </div>
@@ -74,7 +74,7 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para empresa [Cann
 <!-- :white_check_mark: -->
 <!-- :white_large_square:  -->
 
-<input type="checkbox"/>Componente Top bar<br/>
+<input type="checkbox" checked/>Componente Top bar<br/>
 <input type="checkbox"/>Componente de cards<br/>
 <input type="checkbox"/>Componente de botão, com variações e animações<br/>
 <input type="checkbox"/>Adicionar font: Spartan<br/>

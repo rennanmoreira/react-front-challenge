@@ -1,10 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { action as rootAction } from './routes/roots/action'
-import { loader as rootLoader } from './routes/roots/loader'
+import { action as rootAction } from './routes/app/action'
+import { loader as rootLoader } from './routes/app/loader'
 import { action as editAction } from './routes/contacts/action'
 import { action as destroyAction } from './routes/contacts/destroy'
 import { loader as contactLoader } from './routes/contacts/loader'
-import Root from './routes/root'
+import App from './routes/app'
 import Contact from './routes/contact'
 import ErrorPage from './routes/errorPage'
 import EditContact from './routes/contacts/edit'
@@ -12,7 +12,7 @@ import EditContact from './routes/contacts/edit'
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root />,
+    element: <App />,
     errorElement: <ErrorPage />,
     loader: rootLoader,
     action: rootAction,
