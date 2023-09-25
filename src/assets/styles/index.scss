@@ -1,13 +1,7 @@
-@import url(styles/fonts.scss);
+@import url(@/assets/styles/fonts.scss);
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  // font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,8 +13,8 @@
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
   outline: 0px;
+  box-sizing: border-box;
   font-family:
     Nunito,
     Spartan,
@@ -28,4 +22,24 @@
     ITC Avant Garde Gothic Std Bk,
     sans-serif;
   scroll-behavior: smooth;
+  --color-primary: green;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family:
+    ITC Avant Garde Gothic,
+    Spartan,
+    Nunito,
+    ITC Avant Garde Gothic Std Bk,
+    sans-serif;
 }

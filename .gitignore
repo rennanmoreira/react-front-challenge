@@ -27,3 +27,4 @@ tests/coverage
 cypress/coverage
 cypress/screenshots
 .nyc_output
+examples/
