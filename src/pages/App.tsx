@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import TopBar from '../components/TopBar'
+import Navbar from '../components/Navbar'
 
 const H1 = styled.h1<{ red?: boolean }>`
   color: ${({ red }) => (red && 'red') || '#645cfc'};
@@ -16,7 +16,7 @@ function App() {
     <>
       {/* <Button>Botão Normal</Button> */}
       {/* <TomatoButton>Botão Tomate</TomatoButton> */}
-      <TopBar />
+      <Navbar />
       {/* <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
