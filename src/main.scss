@@ -49,7 +49,7 @@ body {
   overflow-x: hidden;
 }
 
-.gKPQMv::before {
+#section-welcome::before {
   content: '';
   position: absolute;
   left: 0px;
@@ -64,7 +64,7 @@ body {
   filter: blur(80px);
 }
 
-.eptzdv::after {
+.page-content::after {
   content: '';
   position: absolute;
   right: -200px;
