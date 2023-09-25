@@ -38,65 +38,68 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para empresa [Cann
 <div style="text-align: left; display: grid; grid-template-columns: 1fr 1fr 1fr;">
   <div>
 
-- [Git](https://git-scm.com/)
-- [Yarn](https://yarnpkg.com/)
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5)
-- [TypeScript](https://www.typescriptlang.org/)
-- [FontAwesome](https://fontawesome.com/)
-</div>
-<div>
-
-- [TDD](https://pt.wikipedia.org/wiki/Test-driven_development)
-- [PWA](https://web.dev/progressive-web-apps/)
-- [i18next](https://www.i18next.com/)
-- [Sentry](https://sentry.io/welcome/)
-- [Cypress](https://www.cypress.io/)
-- [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-- [SCSS](https://sass-lang.com/)
-</div>
-<div>
-
-- [ReactJS](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [Vitest](https://vitest.dev/)
-- [SWC](https://swc.rs/)
-- [React Router](https://reactrouter.com/)
-- [React Hook Form](https://react-hook-form.com/)
-- [Styled Components](https://styled-components.com/)
-
+  - [Git](https://git-scm.com/)
+  - [Yarn](https://yarnpkg.com/)
+  - [ESLint](https://eslint.org/)
+  - [Prettier](https://prettier.io/)
+  - [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5)
+  - [TypeScript](https://www.typescriptlang.org/)
+  <!-- - [i18next](https://www.i18next.com/) -->
   </div>
-</div>
+  <div>
 
-## Requisitos
+  - [TDD](https://pt.wikipedia.org/wiki/Test-driven_development)
+  - [PWA](https://web.dev/progressive-web-apps/)
+  - [Cypress](https://www.cypress.io/)
+  - [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+  - [SCSS](https://sass-lang.com/)
+  - [FontAwesome](https://fontawesome.com/)
+  <!-- - [Sentry](https://sentry.io/welcome/) -->
+  </div>
+  <div>
+
+  - [ReactJS](https://reactjs.org/)
+  - [Vite](https://vitejs.dev/)
+  - [Vitest](https://vitest.dev/)
+  - [SWC](https://swc.rs/)
+  - [React Router](https://reactrouter.com/)
+  - [Styled Components](https://styled-components.com/)
+    <!-- - [React Hook Form](https://react-hook-form.com/) -->
+    </div>
+  </div>
+
+## Requisitos V1
 
 <!-- :white_check_mark: -->
 <!-- :white_large_square:  -->
 
-<input type="checkbox" checked/>Componente Top bar<br/>
-<input type="checkbox"/>Componente de cards<br/>
-<input type="checkbox"/>Componente de botão, com variações e animações<br/>
-<input type="checkbox"/>Adicionar font: Spartan<br/>
-<input type="checkbox"/>Home - Seção 1 - Inicie seu tratamento<br/>
-<input type="checkbox"/>Home - Seção 2 - Seu caminho para uma vida melhor<br/>
-<input type="checkbox"/>Home - Seção 3 - Somos o maior ecossistema<br/>
-<input type="checkbox"/>Home - Seção 4 - Encontre ciência, saúde e bem-estar<br/>
-<input type="checkbox"/>Home - Seção 5 - Cuidamos de você em todo processo<br/>
-<input type="checkbox"/>Home - Seção 6 - Quebre o tabu sobre Cannabis<br/>
-<input type="checkbox"/>Home - Seção 7 - Histórias reais<br/>
-<input type="checkbox"/>Home - Seção 8 - Parceiros Cannect (usar padrão da /area-parceiros)<br/>
-<input type="checkbox"/>Home - Seção 9 - Leia aqui as novidades<br/>
-<input type="checkbox"/>Componente Footer<br/>
-<input type="checkbox"/>Utilizar scss e css grid<br/>
+<input type="checkbox" checked/>Componente NavBar<br/>
+<input type="checkbox" checked/>HTML Semántico<br/>
+<input type="checkbox" checked/>Componente de cards<br/>
+<input type="checkbox" checked/>Componente de botão, com variações e animações<br/>
+<input type="checkbox" checked/>Adicionar font: Spartan<br/>
+<input type="checkbox" checked/>Home - Seção 1 - Inicie seu tratamento<br/>
+<input type="checkbox" checked/>Home - Seção 2 - Seu caminho para uma vida melhor<br/>
+<input type="checkbox" checked/>Home - Seção 3 - Somos o maior ecossistema<br/>
+<input type="checkbox" checked/>Home - Seção 4 - Encontre ciência, saúde e bem-estar<br/>
+<input type="checkbox" checked/>Home - Seção 5 - Cuidamos de você em todo processo<br/>
+<input type="checkbox" checked/>Home - Seção 6 - Quebre o tabu sobre Cannabis<br/>
+<input type="checkbox" checked/>Home - Seção 7 - Histórias reais<br/>
+<input type="checkbox" checked/>Home - Seção 8 - Parceiros Cannect (usar padrão da /area-parceiros)<br/>
+<input type="checkbox" checked/>Home - Seção 9 - Leia aqui as novidades<br/>
+<input type="checkbox" checked/>Componente Footer<br/>
+<input type="checkbox" checked/>Utilizar scss, flex e css grid<br/>
 <input type="checkbox"/>Responsividade com media-queries<br/>
-<input type="checkbox"/>Background superior esquerdo levemente esverdeado<br/>
-<input type="checkbox"/>Background inferior direito levemente esverdeado (fixo)<br/>
+<input type="checkbox" checked/>Background superior esquerdo levemente esverdeado<br/>
+<input type="checkbox" checked/>Background inferior direito levemente esverdeado (fixo)<br/>
 <input type="checkbox"/>Dialogo para perguntar sobre Cookies<br/>
 <input type="checkbox"/>Banner desktop - Comece seu tratamento inicial<br/>
 <input type="checkbox"/>Componente fale conosco com formulário em dialogo<br/>
+<input type="checkbox"/>Componente Whatsapp<br/>
+<input type="checkbox" checked/>Adicionando ESLint<br/>
+<input type="checkbox" checked/>Adicionando Prettier<br/>
 
-## Desejáveis
+## Requisitos V2
 
 <input type="checkbox" />Desenvolver com TDD<br/>
 <input type="checkbox" />Criar manifest e service work para PWA<br/>
@@ -104,8 +107,6 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para empresa [Cann
 <input type="checkbox" />Rodar cypress para cenários de usuários<br/>
 <input type="checkbox" />Chamada RestAPI para algum formulário<br/>
 <input type="checkbox" />Criar uma RestAPI servir requests JSON<br/>
-<input type="checkbox" />Adicionando ESLint<br/>
-<input type="checkbox" />Adicionando Prettier<br/>
 <input type="checkbox" />Fale conosco em Modal<br/>
 <input type="checkbox" />Login em Modal ou no Top Bar<br/>
 <input type="checkbox" />Home: Titulo "cannabis medicinal" com font-weigh 700<br/>
@@ -132,6 +133,7 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para empresa [Cann
 <input type="checkbox" />Blog<br/>
 <input type="checkbox" />Blog: Criar modo mansonry/pinterest<br/>
 <input type="checkbox" />Adicionar Sentry<br/>
+<input type="checkbox" />Adicionar React Hook Form<br/>
 
 ## Observações
 
@@ -147,26 +149,30 @@ $ yarn install
 
 ```bash
 # development
-$ yarn run start
+$ yarn dev
 
-# watch mode
-$ yarn run start:dev
+# build
+$ yarn build
 
 # production mode
-$ yarn run start:prod
+$ yarn preview
+
 ```
 
 ## Testando
 
 ```bash
 # unit tests
-$ yarn run test
+$ yarn test
 
-# e2e tests
-$ yarn run test:e2e
+# test unit coverage
+$ yarn coverage
 
-# test coverage
-$ yarn run test:cov
+# e2e tests and coverage
+$ yarn cy:run-e2e
+
+# lint
+$ yarn lint
 ```
 
 ## Entre em contato

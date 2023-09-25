@@ -49,11 +49,10 @@ body {
   overflow-x: hidden;
 }
 
-#section-welcome::before {
+#section-welcome::before,
+.page-content::after {
   content: '';
   position: absolute;
-  left: 0px;
-  top: 0px;
   border-radius: 0px 0px 100%;
   background-color: rgb(120, 216, 183);
   width: 30%;
@@ -64,17 +63,13 @@ body {
   filter: blur(80px);
 }
 
+#section-welcome::before {
+  left: 0px;
+  top: 0px;
+  opacity: 0.2;
+}
 .page-content::after {
-  content: '';
-  position: absolute;
   right: -200px;
   bottom: -250px;
-  border-radius: 0px 0px 100%;
-  background-color: rgb(120, 216, 183);
-  width: 30%;
-  height: 500px;
-  transform: translate(0px, 20px) scale(1.2);
-  z-index: -1;
   opacity: 0.15;
-  filter: blur(80px);
 }
