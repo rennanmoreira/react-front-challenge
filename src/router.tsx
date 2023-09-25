@@ -4,7 +4,8 @@ import { loader as rootLoader } from './routes/app/loader'
 import { action as editAction } from './routes/contacts/action'
 import { action as destroyAction } from './routes/contacts/destroy'
 import { loader as contactLoader } from './routes/contacts/loader'
-import App from './routes/app'
+import App from './pages/App'
+import Home from './pages/Home'
 import Contact from './routes/contact'
 import ErrorPage from './routes/errorPage'
 import EditContact from './routes/contacts/edit'
@@ -19,7 +20,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <p id="zero-state">Bem vindo ao Teste React Router.</p>,
+        element: <Home />,
       },
       {
         path: 'contacts/:contactId',

@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { useLoaderData, Outlet, Form, NavLink, useNavigation } from 'react-router-dom'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const H1 = styled.h1<{ red?: boolean }>`
   color: ${({ red }) => (red && 'red') || '#645cfc'};
@@ -11,33 +13,18 @@ const H1 = styled.h1<{ red?: boolean }>`
 
 function App() {
   const [count, setCount] = useState(0)
+  const { contacts }: any = useLoaderData()
+  const navigation = useNavigation()
 
   return (
     <>
-      {/* <Button>Botão Normal</Button> */}
-      {/* <TomatoButton>Botão Tomate</TomatoButton> */}
       <Navbar />
-      {/* <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className={navigation.state === 'loading' ? 'loading' : ''}>
+        <Outlet />
       </div>
-      <H1 red>Vite + React</H1>
-      <FontAwesomeIcon icon={faEnvelope} />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
+      {/* <span id="detail" className={navigation.state === 'loading' ? 'loading' : ''}>
+        <span>{navigation.state}</span>
+      </span> */}
     </>
   )
 }

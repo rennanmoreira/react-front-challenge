@@ -14,7 +14,7 @@ const LoginButton = styled.span`
 const Root = styled(Flex)`
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border-bottom: 1px solid rgb(217, 217, 217);
   height: 120px;
   position: fixed;
