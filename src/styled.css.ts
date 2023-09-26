@@ -36,6 +36,7 @@ class FlexOptions extends BaseOptions {
 }
 
 class ColumnOptions extends FlexOptions {
+  $base?: number = 12
   $span?: string
   $xs?: string
   $sm?: string
@@ -94,10 +95,10 @@ export const Row = styled(Flex)<FlexOptions>`
   padding: 10px;
 `
 
-const columnSizePercent = (size: string | undefined) => size && parseInt(size) / 0.12 + '%'
+const columnSizePercent = (size: string | undefined, base: number = 12) => size && (parseInt(size) / base) * 100 + '%'
 
 export const Column = styled(Flex)<ColumnOptions>`
-  --flex-span: ${(p) => columnSizePercent(p.$span) ?? 'auto'};
+  --flex-span: ${(p) => columnSizePercent(p.$span, p.$base) ?? 'auto'};
 
   flex: 0 0 var(--flex-span);
   max-width: var(--flex-span);
@@ -105,44 +106,44 @@ export const Column = styled(Flex)<ColumnOptions>`
   padding: ${(p) => p.style?.padding ?? '0 5px'};
 
   @media (min-width: ${devices.mobileSmall}) {
-    --flex-xs: ${(p) => columnSizePercent(p.$xs) ?? 'var(--flex-span)'};
+    --flex-xs: ${(p) => columnSizePercent(p.$xs, p.$base) ?? 'var(--flex-span)'};
     flex: 0 0 var(--flex-xs);
     max-width: var(--flex-xs);
     padding: ${(p) => p.style?.padding ?? '0 15px'};
   }
 
   @media (min-width: ${devices.mobileMedium}) {
-    --flex-sm: ${(p) => columnSizePercent(p.$sm) ?? 'var(--flex-xs)'};
+    --flex-sm: ${(p) => columnSizePercent(p.$sm, p.$base) ?? 'var(--flex-xs)'};
     flex: 0 0 var(--flex-sm);
     max-width: var(--flex-sm);
   }
 
   @media (min-width: ${devices.mobileLarge}) {
-    --flex-sl: ${(p) => columnSizePercent(p.$sl) ?? 'var(--flex-sm)'};
+    --flex-sl: ${(p) => columnSizePercent(p.$sl, p.$base) ?? 'var(--flex-sm)'};
     flex: 0 0 var(--flex-sl);
     max-width: var(--flex-sl);
   }
 
   @media (min-width: ${devices.tablet}) {
-    --flex-md: ${(p) => columnSizePercent(p.$md) ?? 'var(--flex-sl)'};
+    --flex-md: ${(p) => columnSizePercent(p.$md, p.$base) ?? 'var(--flex-sl)'};
     flex: 0 0 var(--flex-md);
     max-width: var(--flex-md);
   }
 
   @media (min-width: ${devices.laptop}) {
-    --flex-lg: ${(p) => columnSizePercent(p.$lg) ?? 'var(--flex-md)'};
+    --flex-lg: ${(p) => columnSizePercent(p.$lg, p.$base) ?? 'var(--flex-md)'};
     flex: 0 0 var(--flex-lg);
     max-width: var(--flex-lg);
   }
 
   @media (min-width: ${devices.laptopLarge}) {
-    --flex-xl: ${(p) => columnSizePercent(p.$xl) ?? 'var(--flex-lg)'};
+    --flex-xl: ${(p) => columnSizePercent(p.$xl, p.$base) ?? 'var(--flex-lg)'};
     flex: 0 0 var(--flex-xl);
     max-width: var(--flex-xl);
   }
 
   @media (min-width: ${devices.desktop}) {
-    --flex-xxl: ${(p) => columnSizePercent(p.$xxl) ?? 'var(--flex-xl)'};
+    --flex-xxl: ${(p) => columnSizePercent(p.$xxl, p.$base) ?? 'var(--flex-xl)'};
     flex: 0 0 var(--flex-xxl);
     max-width: var(--flex-xxl);
   }
