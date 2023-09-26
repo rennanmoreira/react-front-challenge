@@ -14,6 +14,12 @@ span {
   }
 }
 
+.hide-for-tablet-plus-and-down {
+  @media (max-width: 980px) {
+    display: none !important;
+  }
+}
+
 .show-for-tablet-and-down {
   display: none;
 
@@ -33,6 +39,12 @@ span {
 .hide-for-mobile {
   @media (max-width: 770px) {
     display: none !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .hide-for-desktop {
+    display: none;
   }
 }
 

@@ -147,14 +147,14 @@ const Home = () => {
                 </Tilt>
                 <Tilt>
                   <BannerImage
-                    className="hide-for-tablet"
+                    className="hide-for-desktop"
                     src="https://www.cannect.life/static/media/banner-image-2.69443d255f1ca027ad58.webp"
                     alt="gummies com cbd de cannabis medicinal"
                   />
                 </Tilt>
                 <Tilt>
                   <BannerImage
-                    className="show-for-desktop-and-down hide-for-tablet-and-down"
+                    className="show-for-desktop-and-down hide-for-tablet-plus-and-down"
                     src="https://www.cannect.life/static/media/banner-image-medium.d5777403240a0ee77cb8.png"
                     alt="oleo cannabis medicinal"
                   />

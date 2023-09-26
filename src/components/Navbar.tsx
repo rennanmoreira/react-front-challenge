@@ -4,6 +4,7 @@ import { Flex } from '../styled.css.ts'
 import Logo from '@/assets/logo-cannect.svg'
 import LoginUserIcon from '@/assets/login-user.svg'
 import MenuIcon from '@/assets/menu.svg'
+import navbarStyles from '@/assets/styles/navbar.scss?inline'
 
 const LoginButton = styled.span`
   font-family: ITC Avant Garde Gothic Std;
@@ -30,99 +31,7 @@ const Root = styled(Flex)`
     height: 110px;
   }
 
-  a {
-    text-decoration: none;
-    font-family: Spartan, sans-serif;
-    font-size: 15px;
-    color: rgb(61, 61, 61);
-    font-weight: 500;
-  }
-
-  section > a {
-    margin: 6px;
-
-    @media (max-width: 1200px) {
-      margin: 0px;
-    }
-  }
-
-  .menu {
-    img {
-      width: 162px;
-      margin-right: 20px;
-
-      @media (min-width: 1030px) {
-        width: 135px;
-      }
-
-      @media (min-width: 1290px) {
-        width: 200px;
-      }
-    }
-  }
-
-  @media (max-width: 1250px) {
-    .btn-login {
-      display: none;
-    }
-  }
-
-  .menu-close {
-    margin-top: 4px;
-    display: none;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: rgb(61, 61, 61);
-    transition: transform 0.3s ease 0s;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-
-    @media (max-width: 1250px) {
-      display: initial;
-    }
-  }
-
-  .menu-links {
-    gap: 24px;
-    width: 100%;
-    place-items: center;
-    place-content: center;
-
-    @media (max-width: 1030px) {
-      display: none;
-    }
-
-    @media (max-width: 1130px) {
-      gap: 14px;
-    }
-
-    @media (max-width: 1070px) {
-      gap: 12px;
-
-      a {
-        font-size: 13px;
-      }
-    }
-  }
-
-  .container {
-    padding: 1.8rem 52px;
-    width: 100%;
-    max-width: 1440px;
-    align-items: center;
-    justify-content: space-between;
-
-    @media (min-width: 1030px) and (max-width: 1290px) {
-      padding: 1.8rem 42px;
-    }
-
-    @media (max-width: 900px) {
-      padding: 1.8rem 32px;
-    }
-  }
+  ${navbarStyles}
 `
 
 export default function Component() {
