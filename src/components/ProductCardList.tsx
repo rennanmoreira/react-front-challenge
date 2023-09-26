@@ -35,7 +35,7 @@ const ProductCardList = () => {
     <>
       {linksData.map(({ alt, src, toPath }, id) => {
         return (
-          <Tilt key={id}>
+          <Tilt tiltReverse={true} key={id}>
             <Card alt={alt} src={src} toPath={toPath} />
           </Tilt>
         )

@@ -31,7 +31,7 @@ export const RootCard = styled(Flex)`
 export const HealthCard = (props) => {
   return (
     <>
-    <Tilt>
+    <Tilt tiltReverse={true}>
       <RootCard>
         <img alt={props.alt} src={props.src} />
         <H3>{props.title}</H3>

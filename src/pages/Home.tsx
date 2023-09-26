@@ -137,7 +137,7 @@ const Home = () => {
                 </ButtonsContainer>
               </TextSection>
               <BannerSection>
-                <Tilt>
+                <Tilt tiltReverse={true}>
                   <BannerImage
                     className="hide-for-tablet"
                     src="https://www.cannect.life/static/media/banner-image-1.c2bdae1e8783e153b00f.webp"
@@ -145,14 +145,14 @@ const Home = () => {
                     style={{ marginTop: '-34px' }}
                   />
                 </Tilt>
-                <Tilt>
+                <Tilt tiltReverse={true}>
                   <BannerImage
                     className="hide-for-desktop"
                     src="https://www.cannect.life/static/media/banner-image-2.69443d255f1ca027ad58.webp"
                     alt="gummies com cbd de cannabis medicinal"
                   />
                 </Tilt>
-                <Tilt>
+                <Tilt tiltReverse={true}>
                   <BannerImage
                     className="show-for-desktop-and-down hide-for-tablet-plus-and-down"
                     src="https://www.cannect.life/static/media/banner-image-medium.d5777403240a0ee77cb8.png"
@@ -174,19 +174,19 @@ const Home = () => {
                 <span>Seu caminho</span> para uma <span>vida melhor:</span>
               </H2>
               <Flex className="start-treatment hide-for-tablet-and-down">
-                <Tilt>
+                <Tilt tiltReverse={true}>
                   <img
                     alt="não tenho receita"
                     src="https://www.cannect.life/static/media/nao-tenho-receita.9c7b86ff6dd86a16a7d7.png"
                   />
                 </Tilt>
-                <Tilt>
+                <Tilt tiltReverse={true}>
                   <img
                     alt="Receita Branca"
                     src="https://www.cannect.life/static/media/receita-branca.96ba82ca0a81b75b0e99.png"
                   />
                 </Tilt>
-                <Tilt>
+                <Tilt tiltReverse={true}>
                   <img
                     alt="Receita especial"
                     src="https://www.cannect.life/static/media/receita-especial.863307e14bad6e71f3c9.png"
@@ -195,19 +195,19 @@ const Home = () => {
               </Flex>
               <div className=" show-for-tablet-and-down">
                 <Flex className="start-treatment">
-                  <Tilt>
+                  <Tilt tiltReverse={true}>
                     <img
                       alt="não tenho receita"
                       src="https://www.cannect.life/static/media/nao-tenho-receita-mobile.24b692f9c139ad419b3b.png"
                     />
                   </Tilt>
-                  <Tilt>
+                  <Tilt tiltReverse={true}>
                     <img
                       alt="Receita Branca"
                       src="https://www.cannect.life/static/media/receita-branca-mobile.f8455d05cc8b93f31292.png"
                     />
                   </Tilt>
-                  <Tilt>
+                  <Tilt tiltReverse={true}>
                     <img
                       alt="Receita especial"
                       src="https://www.cannect.life/static/media/receita-especial-mobile.a71a2b30080bd3bbf56f.png"
@@ -250,7 +250,7 @@ const Home = () => {
                     className="center-on-mobile"
                   />
                 </Flex>
-                <Tilt>
+                <Tilt tiltReverse={true}>
                   <img
                     className="hide-for-tablet-and-down"
                     alt="about us logos"
@@ -418,7 +418,7 @@ const Home = () => {
                     marginLeft: '30px',
                   }}
                 >
-                  <Tilt tiltMaxAngleX={6} tiltMaxAngleY={6}>
+                  <Tilt tiltReverse={true} tiltMaxAngleX={6} tiltMaxAngleY={6}>
                     <img
                       className="hide-for-tablet-and-down"
                       alt="atleta subindo escadas"
@@ -457,7 +457,7 @@ const Home = () => {
                     alignItems: 'center',
                   }}
                 >
-                  <Tilt>
+                  <Tilt tiltReverse={true}>
                     <img
                       alt="Profile picture"
                       src="https://strapi.cannect.life/uploads/julia_38cba9a83c.jpeg"
@@ -531,7 +531,7 @@ const Home = () => {
                     alignItems: 'center',
                   }}
                 >
-                  <Tilt>
+                  <Tilt tiltReverse={true}>
                     <img
                       alt="Profile picture"
                       src="https://strapi.cannect.life//uploads/elaine_e_seu_filho_7969358314.jpeg"
@@ -608,7 +608,7 @@ const Home = () => {
                     alignItems: 'center',
                   }}
                 >
-                  <Tilt>
+                  <Tilt tiltReverse={true}>
                     <img
                       alt="Profile picture"
                       src="https://strapi.cannect.life//uploads/Soraia_Lopes_3b05849076.jpeg"
@@ -682,7 +682,7 @@ const Home = () => {
                     alignItems: 'center',
                   }}
                 >
-                  <Tilt>
+                  <Tilt tiltReverse={true}>
                     <img
                       alt="Profile picture"
                       src="https://strapi.cannect.life//uploads/Luciana_Falcao_d96695cbdc.jpg"
@@ -756,7 +756,7 @@ const Home = () => {
                     alignItems: 'center',
                   }}
                 >
-                  <Tilt>
+                  <Tilt tiltReverse={true}>
                     <img
                       alt="Profile picture"
                       src="https://strapi.cannect.life//uploads/Whats_App_Image_2022_04_19_at_18_05_35_1a4e19322a.jpeg"
