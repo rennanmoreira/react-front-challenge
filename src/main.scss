@@ -73,3 +73,9 @@ body {
   bottom: -250px;
   opacity: 0.15;
 }
+
+@media (min-width: 320px) and (max-width: 667px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

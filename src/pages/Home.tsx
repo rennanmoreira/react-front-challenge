@@ -1,7 +1,22 @@
 import styled from 'styled-components'
 import Footer from '../components/Footer'
-import { Flex } from '../styled.css.ts'
+import { Row, Column, Flex, H1, H2, H3, Paragraph } from '../styled.css.ts'
 import { Link } from 'react-router-dom'
+import ProductCards from '../components/ProductCardList.tsx'
+import Button from '../components/Button'
+import { HealthCardList } from '../components/HealthCardList.tsx'
+import '@/assets/styles/home.scss'
+
+const img = styled.img`
+  border-radius: 20px 20px 0px 0px;
+  width: 432px;
+  min-width: 432px;
+  max-width: 432px;
+  height: 283px;
+  min-height: 283px;
+  max-height: 283px;
+  object-fit: cover;
+`
 
 const Root = styled.div`
   padding: 120px 0 0;
@@ -14,145 +29,6 @@ const Root = styled.div`
   align-items: center;
   justify-content: space-between;
   font: 14px Nunito;
-
-  span {
-    font-weight: 700;
-  }
-
-  #section-welcome {
-    p {
-      font-size: 17px;
-      font-weight: 600;
-    }
-  }
-
-  #section-way {
-    -webkit-box-pack: justify;
-    padding: 0px 48px 110px;
-    flex-wrap: wrap;
-
-    img {
-      width: 360px;
-      cursor: pointer;
-    }
-  }
-
-  #section-ecosystem {
-    padding: 58px 48px;
-    gap: 28px;
-    background: url('https://www.cannect.life/static/media/about-us-banner.84fb00017b87e43803e4.png')
-      0% 0% / cover no-repeat;
-    width: 100vw;
-    position: relative;
-    left: calc(-50vw + 50%);
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-  }
-
-  #section-science {
-    padding: 92px 0px 100px 48px;
-    flex-direction: column;
-    align-items: flex-start;
-    -webkit-box-pack: center;
-    justify-content: center;
-
-    img {
-      width: 216px;
-    }
-  }
-
-  #section-process {
-    padding: 0px 0px 100px 48px;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    -webkit-box-pack: center;
-    justify-content: center;
-    position: relative;
-
-    img {
-      width: 33px;
-    }
-  }
-
-  #section-tabu {
-    gap: 135px;
-    padding: 0px 48px;
-    flex-direction: row;
-    position: relative;
-
-    h3 {
-      max-width: 680px;
-      font-size: 32px;
-      font-weight: 500;
-      color: rgb(61, 61, 61);
-    }
-
-    p {
-      max-width: 680px;
-      flex-direction: column;
-      font-size: 21px;
-      font-weight: 400;
-      line-height: 145%;
-      letter-spacing: -0.045em;
-      margin-bottom: 10px;
-    }
-  }
-
-  #section-real-history {
-    padding: 170px 0px 100px 48px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    -webkit-box-pack: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  #section-parceiros {
-    gap: 135px;
-    padding: 0px 48px 90px;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-  }
-
-  #section-novidades {
-    padding: 0px 0px 100px 48px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    -webkit-box-pack: center;
-    justify-content: center;
-    position: relative;
-
-    a {
-      text-decoration: none;
-    }
-  }
-`
-const H2 = styled.h2`
-  font-size: 40px;
-  font-weight: 400;
-  color: rgb(61, 61, 61);
-  margin-bottom: 40px;
-`
-
-const H3 = styled.h3`
-  font-size: 20px;
-  font-weight: 600;
-  color: rgb(61, 61, 61);
-`
-
-const Paragraph = styled.p`
-  font-size: 18px;
-  font-weight: 500;
-  color: rgb(61, 61, 61);
 `
 
 const PageWrapper = styled.div`
@@ -174,27 +50,18 @@ const Section = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 900px) {
+    padding: 64px 30px 30px;
+  }
 `
 
 const TextSection = styled.div`
   max-width: 725px;
-  min-width: 660px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-`
-
-const Heading = styled.h1`
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 140.5%;
-  color: rgb(61, 61, 61);
-
-  span {
-    font-weight: 600;
-    color: rgb(33, 151, 110);
-  }
 `
 
 const ButtonsContainer = styled.div`
@@ -206,31 +73,17 @@ const ButtonsContainer = styled.div`
   text-decoration: none;
 `
 
-const Button = styled.button`
-  gap: 0.5rem;
-  padding: 1rem;
-  transition: transform 0.2s ease 0s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  height: 48px;
-  font-weight: 500;
-  border-radius: 5px;
-  width: 252px;
-`
+const CustomLink = styled(Link)`
+  transition: all 0.3s ease 0s;
+  margin-top: 28px;
+  font-size: 20px;
+  text-align: start;
+  color: rgb(69, 121, 255);
 
-const ConsultationButton = styled(Button)`
-  background: rgb(17, 88, 80);
-  border: 1px solid rgb(17, 88, 80);
-  background-color: rgb(61, 61, 61);
-  color: white;
-`
-
-const TreatmentButton = styled(Button)`
-  background: white;
-  border: 2px solid rgb(33, 151, 110);
-  color: rgb(61, 61, 61);
+  &:hover {
+    /* padding-left: 14px; */
+    transform: scale(1.04) translateX(12px);
+  }
 `
 
 const BannerSection = styled.div`
@@ -264,60 +117,56 @@ const Home = () => {
                     marginBottom: '32px',
                   }}
                 >
-                  <Heading>
+                  <H1>
                     Inicie <span>seu tratamento</span> <br /> com{' '}
-                    <span>cannabis medicinal</span>
-                  </Heading>
-                  <Paragraph>
-                    A Cannect pode te ajudar em seu caminho para uma vida melhor. <br />{' '}
-                    Cuidamos de você em todo o processo, faça parte da revolução verde!
+                    <span style={{ color: 'rgb(33, 151, 110)' }}>cannabis medicinal</span>
+                  </H1>
+                  <Paragraph style={{ maxWidth: '600px' }}>
+                    A Cannect pode te ajudar em seu caminho para uma vida melhor. Cuidamos de
+                    você em todo o processo, faça parte da revolução verde!
                   </Paragraph>
                 </Flex>
                 <ButtonsContainer>
-                  <ConsultationButton>
-                    <p style={{ color: 'white' }}>Agende sua consulta</p>
-                  </ConsultationButton>
-                  <TreatmentButton>
-                    <p style={{ color: 'rgb(61, 61, 61)' }}>Inicie seu tratamento</p>
-                  </TreatmentButton>
+                  <Button title={'Agende sua consulta'} />
+                  <Button
+                    title={'Inicie seu tratamento'}
+                    variant="secondary"
+                    className="hide-for-mobile"
+                  />
                 </ButtonsContainer>
               </TextSection>
               <BannerSection>
                 <BannerImage
+                  className="hide-for-tablet"
                   src="https://www.cannect.life/static/media/banner-image-1.c2bdae1e8783e153b00f.webp"
                   alt="banner"
                   style={{ marginTop: '-34px' }}
                 />
                 <BannerImage
+                  className="hide-for-tablet"
                   src="https://www.cannect.life/static/media/banner-image-2.69443d255f1ca027ad58.webp"
+                  alt="banner"
+                />
+                <BannerImage
+                  className="show-for-desktop-and-down hide-for-tablet-and-down"
+                  src="https://www.cannect.life/static/media/banner-image-medium.d5777403240a0ee77cb8.png"
                   alt="banner"
                 />
               </BannerSection>
             </Section>
 
             <Section id="section-way">
-              <h2
+              <H2
+                className="hide-for-tablet-and-down"
                 style={{
                   width: '100%',
-                  fontWeight: 400,
-                  fontSize: '40px',
                   lineHeight: '155%',
                   marginBottom: '45px',
-                  color: 'rgb(61, 61, 61)',
                 }}
               >
                 <span>Seu caminho</span> para uma <span>vida melhor:</span>
-              </h2>
-              <Flex
-                id="inicie-seu-tratamento"
-                style={{
-                  WebkitBoxAlign: 'center',
-                  alignItems: 'center',
-                  WebkitBoxPack: 'justify',
-                  justifyContent: 'space-between',
-                  width: '100%',
-                }}
-              >
+              </H2>
+              <Flex className="start-treatment hide-for-tablet-and-down">
                 <img
                   alt="não tenho receita"
                   src="https://www.cannect.life/static/media/nao-tenho-receita.9c7b86ff6dd86a16a7d7.png"
@@ -331,6 +180,22 @@ const Home = () => {
                   src="https://www.cannect.life/static/media/receita-especial.863307e14bad6e71f3c9.png"
                 />
               </Flex>
+              <div className=" show-for-tablet-and-down">
+                <Flex className="start-treatment">
+                  <img
+                    alt="não tenho receita"
+                    src="https://www.cannect.life/static/media/nao-tenho-receita-mobile.24b692f9c139ad419b3b.png"
+                  />
+                  <img
+                    alt="Receita Branca"
+                    src="https://www.cannect.life/static/media/receita-branca-mobile.f8455d05cc8b93f31292.png"
+                  />
+                  <img
+                    alt="Receita especial"
+                    src="https://www.cannect.life/static/media/receita-especial-mobile.a71a2b30080bd3bbf56f.png"
+                  />
+                </Flex>
+              </div>
             </Section>
 
             <Section id="section-ecosystem">
@@ -351,44 +216,23 @@ const Home = () => {
                     maxWidth: '840px',
                   }}
                 >
-                  <h2
-                    style={{
-                      fontSize: '50px',
-                      fontWeight: 400,
-                      color: 'rgb(250, 250, 250)',
-                      marginBottom: '62px',
-                    }}
-                  >
+                  <H2 className="bigger">
                     Somos o <span>maior ecossistema de cannabis</span> da{' '}
                     <span>América Latina</span>
-                  </h2>
-                  <p
-                    style={{
-                      fontSize: '21px',
-                      fontWeight: 400,
-                      color: 'rgb(250, 250, 250)',
-                    }}
-                  >
+                  </H2>
+                  <Paragraph className="bigger" style={{ color: 'rgb(250, 250, 250)' }}>
                     Conectamos centenas de pacientes, médicos, instituições de saúde,
                     pesquisadores e fornecedores todas as semanas para facilitar o acesso à
                     cannabis medicinal e educar para desmistificar o preconceito sobre seu uso.
-                  </p>
+                  </Paragraph>
                   <Button
-                    style={{
-                      border: '2px solid rgb(217, 217, 217)',
-                      background: 'transparent',
-                      transition: 'all 0.3s ease 0s',
-                      width: '222px',
-                      height: '45px',
-                      marginTop: '35px',
-                      fontSize: '19px',
-                      color: 'rgb(250, 250, 250)',
-                    }}
-                  >
-                    conheça mais
-                  </Button>
+                    title="conheça mais"
+                    variant="tertiary"
+                    className="center-on-mobile"
+                  />
                 </Flex>
                 <img
+                  className="hide-for-tablet-and-down"
                   alt="about us logos"
                   src="https://www.cannect.life/static/media/about-us-logos.d6f1eb10f2272cb0b230.png"
                 />
@@ -397,8 +241,10 @@ const Home = () => {
 
             <Section id="section-science">
               <H2>
-                Encontre
-                <span style={{ color: 'rgb(33, 151, 110)' }}>ciência, saúde e bem-estar</span>
+                Encontre{' '}
+                <span style={{ color: 'rgb(33, 151, 110)', fontWeight: '700' }}>
+                  ciência, saúde e bem-estar
+                </span>
               </H2>
               <Flex
                 style={{
@@ -412,40 +258,7 @@ const Home = () => {
                   color: 'rgba(0, 0, 0, 0)',
                 }}
               >
-                <Link to={'/produtos/1?shape_id=1'}>
-                  <img
-                    alt="produto Oleo"
-                    src="https://www.cannect.life/static/media/oil.db0bca1af0202dbb5dcb.png"
-                  />
-                </Link>
-                <Link to={'/produtos/1?shape_id=6'}>
-                  <img
-                    alt="produto Gummy"
-                    src="https://www.cannect.life/static/media/gummy.ef7b010b10aeb50ebbf4.png"
-                  />
-                </Link>
-                <Link to={'/produtos/1?shape_id=2'}>
-                  <img
-                    alt="produto capsula"
-                    src="https://www.cannect.life/static/media/capsula.2c1fe52719db38c5e309.png"
-                  />
-                </Link>
-                <Link
-                  to={
-                    '/produtos/1?shape_id=28&shape_id=17&shape_id=5&shape_id=10&shape_id=47&shape_id=19&shape_id=50&shape_id=31&shape_id=7'
-                  }
-                >
-                  <img
-                    alt="produto Tópico"
-                    src="https://www.cannect.life/static/media/topico.5e96ade7ac023eef72b7.png"
-                  />
-                </Link>
-                <Link to={'/produtos/1?shape_id=29'}>
-                  <img
-                    alt="produto Flores"
-                    src="https://www.cannect.life/static/media/flores.f120c4715b75a0c227ee.png"
-                  />
-                </Link>
+                <ProductCards />
               </Flex>
             </Section>
 
@@ -462,138 +275,11 @@ const Home = () => {
                   width: '100%',
                   paddingBottom: '12px',
                   overflowX: 'auto',
-                  color: 'rgba(0, 0, 0, 0)',
                 }}
               >
-                <Flex
-                  style={{
-                    padding: '22px 14px',
-                    borderRadius: '10px',
-                    gap: '32px',
-                    width: '312px',
-                    minWidth: '312px',
-                    height: '367px',
-                    backgroundColor: 'rgb(238, 246, 254)',
-                    flexDirection: 'column',
-                  }}
-                >
-                  <img
-                    alt="receita médica icone"
-                    src="https://www.cannect.life/static/media/Receipt.7682adb6fe89280c2c89d140b23005ab.svg"
-                  />
-                  <H3>Receita médica</H3>
-                  <Paragraph>
-                    O primeiro passo é possuir sua receita médica e você pode contar com a
-                    cannect para{' '}
-                    <Link
-                      to={'/profissionais-parceiros-cannabis-medicinal'}
-                      rel="noreferrer"
-                      target="_self"
-                      style={{ color: 'rgb(69, 121, 255)' }}
-                    >
-                      encontrar um profissional qualificado
-                    </Link>{' '}
-                    ou trazê-la de um médico de sua preferência.
-                  </Paragraph>
-                </Flex>
-                <Flex
-                  style={{
-                    padding: '22px 14px',
-                    borderRadius: '10px',
-                    gap: '32px',
-                    width: '312px',
-                    minWidth: '312px',
-                    height: '367px',
-                    backgroundColor: 'rgb(238, 246, 254)',
-                    flexDirection: 'column',
-                  }}
-                >
-                  <img
-                    alt="primeiros socorros icone"
-                    src="https://www.cannect.life/static/media/FirstAidKit.3598053e2c84e9793154979f727f011c.svg"
-                  />
-                  <H3>Seu tratamento</H3>
-                  <Paragraph>
-                    Já tem uma receita?{' '}
-                    <a
-                      href="https://www.cannect.life/produtos/1?translated_name="
-                      rel="noreferrer"
-                      style={{ color: 'rgb(69, 121, 255)' }}
-                    >
-                      Encontre o produto prescrito pelo seu médico
-                    </a>
-                    , adicione no carrinho e nos envie a receita e documento. Te ajudaremos em
-                    todo o processo.
-                  </Paragraph>
-                </Flex>
-                <Flex
-                  style={{
-                    padding: '22px 14px',
-                    borderRadius: '10px',
-                    gap: '32px',
-                    width: '312px',
-                    minWidth: '312px',
-                    height: '367px',
-                    backgroundColor: 'rgb(238, 246, 254)',
-                    flexDirection: 'column',
-                  }}
-                >
-                  <img
-                    alt="check quadrado icone"
-                    src="https://www.cannect.life/static/media/CheckSquareOffset.71478b4c6221b0bdb18f73c83d65c17f.svg"
-                  />
-                  <h3
-                    className="sc-kiQcgH hnGMen"
-                    style={{
-                      fontSize: '20px',
-
-                      color: 'rgb(61, 61, 61)',
-                    }}
-                  >
-                    Autorização da ANVISA
-                  </h3>
-                  <Paragraph className="sc-hBLBPu cobcGQ" style={{ fontWeight: 400 }}>
-                    Caso sua receita seja simples (branca) uma autorização da ANVISA será
-                    necessária para que seu produto seja liberado em solo brasileiro, aqui você
-                    encontra{' '}
-                    <Link
-                      to={'https://www.youtube.com/watch?v=cA9OQbNffME'}
-                      rel="noreferrer"
-                      style={{ color: 'rgb(69, 121, 255)' }}
-                      target="_blank"
-                    >
-                      instruções de como obtê-la.
-                    </Link>
-                  </Paragraph>
-                </Flex>
-                <Flex
-                  style={{
-                    padding: '22px 14px',
-                    borderRadius: '10px',
-                    gap: '32px',
-                    width: '312px',
-                    minWidth: '312px',
-                    height: '367px',
-                    backgroundColor: 'rgb(238, 246, 254)',
-                    flexDirection: 'column',
-                  }}
-                >
-                  <img
-                    alt="hear beating icone"
-                    src="https://www.cannect.life/static/media/Heartbeat.2095bfd7f9b03e664c02e424fc689807.svg"
-                  />
-                  <H3 className="sc-kiQcgH hnGMen">Acompanhamento</H3>
-                  <Paragraph>
-                    Após iniciar seu tratamento, você pode receber acompanhamento de uma equipe
-                    de enfermagem especializada através do{' '}
-                    <Link to={'/cuida'} rel="noreferrer" style={{ color: 'rgb(69, 121, 255)' }}>
-                      cannect cuida
-                    </Link>
-                    , preparada para tirar suas dúvidas e fornecer apoio assistencial.
-                  </Paragraph>
-                </Flex>
+                <HealthCardList />
               </Flex>
-              <Flex style={{ margin: '30px 0px 0px' }}>
+              <Flex style={{ margin: '30px 0px 0px' }} className="hide-for-tablet-and-down">
                 <h1
                   style={{
                     display: 'flex',
@@ -617,15 +303,21 @@ const Home = () => {
             </Section>
 
             <Section id="section-tabu">
-              <Flex style={{ flexDirection: 'column' }}>
-                <H2 style={{ color: 'rgb(33, 151, 110)', marginBottom: '64px' }}>
+              <Flex style={{ flexDirection: 'column', maxWidth: '100%' }}>
+                <H2
+                  style={{
+                    color: 'rgb(33, 151, 110)',
+                    marginBottom: '64px',
+                    fontWeight: '600',
+                  }}
+                >
                   Quebre o tabu sobre Cannabis
                 </H2>
                 <H3>
                   O que é <span>cannabis medicinal? </span>
                 </H3>
                  
-                <Paragraph>
+                <Paragraph style={{ marginBottom: '10px' }}>
                   A cannabis possui mais de 120 canabinoides – elementos que fazem parte de sua
                   composição – encontrados até o momento. Para o tratamento medicinal, os
                   componentes da cannabis, sobretudo o CDB, podem ser usados no tratamento de
@@ -637,7 +329,7 @@ const Home = () => {
                   Como a <span>cannabis medicinal age no nosso corpo? </span>
                 </H3>
                  
-                <Paragraph>
+                <Paragraph style={{ marginBottom: '10px' }}>
                   Os produtos de uso medicinal costumam utilizar dois componentes específicos: a
                   tetra-hidrocanabinol (THC) e o canabidiol (CDB), os dois canabinoides mais
                   abundantes e mais pesquisados até o momento. <br />
@@ -647,7 +339,7 @@ const Home = () => {
                   vitais das células e respostas imunológicas.
                   <br />
                 </Paragraph>
-                <Link
+                <CustomLink
                   to={'/blog'}
                   style={{
                     transition: 'all 0.3s ease 0s',
@@ -658,7 +350,7 @@ const Home = () => {
                   }}
                 >
                   {'continue lendo sobre a cannabis medicinal >'}
-                </Link>
+                </CustomLink>
                 <Flex
                   style={{
                     gap: '20px',
@@ -668,40 +360,14 @@ const Home = () => {
                     textDecoration: 'none',
                   }}
                 >
-                  <Button
-                    style={{
-                      gap: '0.5rem',
-                      padding: '1rem',
-                      background: 'rgb(17, 88, 80)',
-                      transition: 'transform 0.2s ease 0s',
-                      height: '48px',
-                      borderRadius: '5px',
-                      backgroundColor: 'rgb(240, 120, 10)',
-                      width: '252px',
-                    }}
-                  >
-                    <Paragraph style={{ fontSize: '19px', color: 'white', fontWeight: 600 }}>
-                      Agende sua consulta
-                    </Paragraph>
-                  </Button>
-                  <Button
-                    style={{
-                      gap: '0.5rem',
-                      padding: '1rem',
-                      transition: 'transform 0.2s ease 0s',
-                      cursor: 'pointer',
-                      color: 'rgb(17, 88, 80)',
-                      height: '48px',
-                      borderRadius: '5px',
-                      border: '2px solid rgb(33, 151, 110)',
-                      background: 'white',
-                      width: '252px',
-                    }}
-                  >
-                    <Paragraph style={{ fontSize: '19px', fontWeight: 600 }}>
-                      Inicie seu tratamento
-                    </Paragraph>
-                  </Button>
+                  <Row className="center-for-mobile">
+                    <Column $md="6" $lg="5" style={{ padding: '10px 10px 0px 0px' }}>
+                      <Button title={'Agende sua consulta'} variant="quaternary" />
+                    </Column>
+                    <Column $md="6" $lg="5" style={{ padding: '10px 10px 0px 0px' }}>
+                      <Button title={'Inicie seu tratamento'} variant="secondary" />
+                    </Column>
+                  </Row>
                 </Flex>
               </Flex>
               <Flex style={{ flexDirection: 'column' }}>
@@ -716,6 +382,7 @@ const Home = () => {
                   }}
                 >
                   <img
+                    className="hide-for-tablet-and-down"
                     alt="atleta subindo escadas"
                     src="https://www.cannect.life/static/media/info-banner-image.194c0052dd5a3c7c928f.webp"
                   />
@@ -724,7 +391,7 @@ const Home = () => {
             </Section>
 
             <Section id="section-real-history">
-              <H3 style={{ fontSize: '40px', fontWeight: 400, marginBottom: '42px' }}>
+              <H3 style={{ fontWeight: 400, marginBottom: '42px' }}>
                 <span>Histórias reais</span> de quem <span style={{}}>confia na Cannect</span>
               </H3>
               <Flex
@@ -773,6 +440,7 @@ const Home = () => {
                       alignItems: 'center',
                       fontSize: '19px',
                       fontWeight: 400,
+                      fontFamily: 'Nunito',
                     }}
                   >
                     Júlia Pires{' '}
@@ -802,6 +470,7 @@ const Home = () => {
                       display: '-webkit-box',
                       WebkitLineClamp: '7',
                       WebkitBoxOrient: 'vertical',
+                      fontFamily: 'Nunito',
                     }}
                   >
                     Júlia Pires, de 33 anos, sofria com ansiedade e insônia há um tempo. Com o
@@ -843,6 +512,7 @@ const Home = () => {
                       alignItems: 'center',
                       fontSize: '19px',
                       fontWeight: 400,
+                      fontFamily: 'Nunito',
                     }}
                   >
                     Elaine Hansen{' '}
@@ -874,6 +544,7 @@ const Home = () => {
                       display: '-webkit-box',
                       WebkitLineClamp: '7',
                       WebkitBoxOrient: 'vertical',
+                      fontFamily: 'Nunito',
                     }}
                   >
                     Elaine Hansen, de 46 anos, tinha dores constantes, que afetavam
@@ -916,6 +587,7 @@ const Home = () => {
                       alignItems: 'center',
                       fontSize: '19px',
                       fontWeight: 400,
+                      fontFamily: 'Nunito',
                     }}
                   >
                     Soraia Lopes{' '}
@@ -987,6 +659,7 @@ const Home = () => {
                       alignItems: 'center',
                       fontSize: '19px',
                       fontWeight: 400,
+                      fontFamily: 'Nunito',
                     }}
                   >
                     Luciana Falcão{' '}
@@ -1010,7 +683,6 @@ const Home = () => {
                     </svg>
                   </H3>
                   <Paragraph
-                    className="sc-lizKOf zNhvC"
                     style={{
                       overflow: 'hidden',
                       textOverflow: 'ellipsis',
@@ -1059,6 +731,7 @@ const Home = () => {
                       alignItems: 'center',
                       fontSize: '19px',
                       fontWeight: 400,
+                      fontFamily: 'Nunito',
                     }}
                   >
                     Bruno Castanheira{' '}
@@ -1122,17 +795,10 @@ const Home = () => {
                   color: 'rgba(0, 0, 0, 0)',
                 }}
               >
-                <H3 style={{ fontSize: '40px', fontWeight: 700, marginBottom: '84px' }}>
-                  Parceiros Cannect
-                </H3>
+                <H3>Parceiros Cannect</H3>
                 <img
                   alt="parceiros cannect logos"
                   src="https://www.cannect.life/static/media/logos-parceiros.d83a56f2a371f01f5bd4.png"
-                  style={{
-                    transition: 'all 0.3s ease 0s',
-                    minWidth: '700px',
-                    filter: 'grayscale(100%)',
-                  }}
                 />
                 <Link
                   to={'/marcas'}
@@ -1150,7 +816,7 @@ const Home = () => {
             </Section>
 
             <Section id="section-novidades">
-              <H3 style={{ fontSize: '40px', fontWeight: 400, marginBottom: '42px' }}>
+              <H3>
                 Leia aqui as <span>novidades da</span>{' '}
                 <span style={{ color: 'rgb(33, 151, 110)' }}>#revoluçãoverde</span>
               </H3>
@@ -1167,54 +833,10 @@ const Home = () => {
                 }}
               >
                 <Link to={'/blog/saude-e-bem-estar/canabidiol-cbd-o-que-e'}>
-                  <Flex
-                    style={{
-                      gap: '20px',
-                      borderRadius: '20px',
-                      width: '100%',
-                      height: '518px',
-                      flexDirection: 'column',
-                      alignItems: 'flex-start',
-                      backgroundColor: 'rgb(254, 254, 254)',
-                      zIndex: 2,
-                    }}
-                  >
-                    <img
-                      src="https://strapi.cannect.life/uploads/thumbnail_cbd_oil_5358403_640_165e4e85bd.jpg"
-                      style={{
-                        borderRadius: '20px 20px 0px 0px',
-                        width: '432px',
-                        minWidth: '432px',
-                        maxWidth: '432px',
-                        height: '283px',
-                        minHeight: '283px',
-                        maxHeight: '283px',
-                        objectFit: 'cover',
-                      }}
-                    />
-                    <H3
-                      style={{
-                        padding: '0px 18px',
-                        gap: '10px',
-                        display: 'flex',
-                        WebkitBoxAlign: 'center',
-                        alignItems: 'center',
-                        fontWeight: 700,
-                      }}
-                    >
-                      Canabidiol (CBD): o que é e para que serve?
-                    </H3>
-                    <Paragraph
-                      style={{
-                        padding: '0px 18px',
-                        overflow: 'hidden',
-                        fontSize: '14px',
-                        textOverflow: 'ellipsis',
-                        display: '-webkit-box',
-                        WebkitLineClamp: '4',
-                        WebkitBoxOrient: 'vertical',
-                      }}
-                    >
+                  <Flex className="card-blog">
+                    <img src="https://strapi.cannect.life/uploads/thumbnail_cbd_oil_5358403_640_165e4e85bd.jpg" />
+                    <H3>Canabidiol (CBD): o que é e para que serve?</H3>
+                    <Paragraph>
                       {' '}
                       Imagem: Pixabay &nbsp; Quando pensamos em cannabis medicinal, é bem
                       provável que também pensemos no&nbsp; canabidiol (CBD) , que é o
@@ -1294,55 +916,10 @@ const Home = () => {
                 <Link
                   to={'/blog/novidades/site-da-cannalize-esta-de-cara-nova-confira-as-mudancas'}
                 >
-                  <Flex
-                    style={{
-                      gap: '20px',
-                      borderRadius: '20px',
-                      width: '100%',
-                      height: '518px',
-                      flexDirection: 'column',
-                      alignItems: 'flex-start',
-                      backgroundColor: 'rgb(254, 254, 254)',
-                      zIndex: 2,
-                    }}
-                  >
-                    <img
-                      src="https://strapi.cannect.life/uploads/thumbnail_Novo_site_cannalize_foto_a23b597ca0.png"
-                      style={{
-                        borderRadius: '20px 20px 0px 0px',
-                        width: '432px',
-                        minWidth: '432px',
-                        maxWidth: '432px',
-                        height: '283px',
-                        minHeight: '283px',
-                        maxHeight: '283px',
-                        objectFit: 'cover',
-                      }}
-                    />
-                    <H3
-                      className="sc-kjUoyC bFVnIh"
-                      style={{
-                        padding: '0px 18px',
-                        gap: '10px',
-                        display: 'flex',
-                        WebkitBoxAlign: 'center',
-                        alignItems: 'center',
-                        fontWeight: 700,
-                      }}
-                    >
-                      Site da Cannalize está de cara nova, confira as principais mudanças
-                    </H3>
-                    <Paragraph
-                      style={{
-                        padding: '0px 18px',
-                        overflow: 'hidden',
-                        fontSize: '14px',
-                        textOverflow: 'ellipsis',
-                        display: '-webkit-box',
-                        WebkitLineClamp: '4',
-                        WebkitBoxOrient: 'vertical',
-                      }}
-                    >
+                  <Flex className="card-blog">
+                    <img src="https://strapi.cannect.life/uploads/thumbnail_Novo_site_cannalize_foto_a23b597ca0.png" />
+                    <H3>Site da Cannalize está de cara nova, confira as principais mudanças</H3>
+                    <Paragraph>
                       {' '}
                       Imagem: Cannalize &nbsp; O tratamento com cannabis está crescendo muito no
                       Brasil e no mundo. Além da necessidade de educar este mercado, é muito
@@ -1375,55 +952,10 @@ const Home = () => {
                   </Flex>
                 </Link>
                 <Link to={'/blog/novidades/inscricoes-do-premio-cannect-prorrogadas'}>
-                  <Flex
-                    style={{
-                      gap: '20px',
-                      borderRadius: '20px',
-                      width: '100%',
-                      height: '518px',
-                      flexDirection: 'column',
-                      alignItems: 'flex-start',
-                      backgroundColor: 'rgb(254, 254, 254)',
-                      zIndex: 2,
-                    }}
-                  >
-                    <img
-                      src="https://strapi.cannect.life/uploads/large_warning_sign4_a8289969ef.jpg"
-                      style={{
-                        borderRadius: '20px 20px 0px 0px',
-                        width: '432px',
-                        minWidth: '432px',
-                        maxWidth: '432px',
-                        height: '283px',
-                        minHeight: '283px',
-                        maxHeight: '283px',
-                        objectFit: 'cover',
-                      }}
-                    />
-                    <H3
-                      style={{
-                        padding: '0px 18px',
-                        gap: '10px',
-                        display: 'flex',
-                        WebkitBoxAlign: 'center',
-                        alignItems: 'center',
-                        fontWeight: 700,
-                      }}
-                    >
-                      ATENÇÃO: Inscrições do Prêmio Cannect são prorrogadas!
-                    </H3>
-                    <Paragraph
-                      className="sc-icDaWZ gLDsSB"
-                      style={{
-                        padding: '0px 18px',
-                        overflow: 'hidden',
-                        fontSize: '14px',
-                        textOverflow: 'ellipsis',
-                        display: '-webkit-box',
-                        WebkitLineClamp: '4',
-                        WebkitBoxOrient: 'vertical',
-                      }}
-                    >
+                  <Flex className="card-blog">
+                    <img src="https://strapi.cannect.life/uploads/large_warning_sign4_a8289969ef.jpg" />
+                    <H3>ATENÇÃO: Inscrições do Prêmio Cannect são prorrogadas!</H3>
+                    <Paragraph>
                       {' '}
                       A maior plataforma de cannabis medicinal da América Latina anunciou, em
                       maio, a primeira edição do&nbsp; Prêmio Cannect de Incentivo à Pesquisa .
@@ -1465,24 +997,7 @@ const Home = () => {
                   </Flex>
                 </Link>
               </Flex>
-              <Button
-                style={{
-                  borderRadius: '5px',
-                  background: 'rgb(61, 61, 61)',
-                  transition: 'all 0.3s ease 0s',
-                  width: '252px',
-                  height: '40px',
-                  paddingTop: '4px',
-                  marginTop: '35px',
-                  zIndex: 2,
-                  alignSelf: 'flex-end',
-                  fontSize: '18px',
-                  fontWeight: 400,
-                  color: 'rgb(250, 250, 250)',
-                }}
-              >
-                Veja mais
-              </Button>
+              <Button title={'Veja mais'} variant="primary" />
             </Section>
           </PageContent>
           <Footer />

@@ -161,3 +161,95 @@ export const Button = (styled.button<BaseOptions>`
     dark: 'red',
   },
 })
+
+export const H1 = styled.h1`
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 140.5%;
+  color: rgb(61, 61, 61);
+  font-family: Spartan;
+
+  span {
+    font-family: Spartan, sans-serif;
+    font-weight: 600;
+  }
+
+  @media (min-width: 900px) and (max-width: 1249px) {
+    font-size: 45px;
+  }
+  @media (max-width: 750px) {
+    font-size: 26px;
+  }
+`
+
+export const H2 = styled.h2`
+  font-size: 40px;
+  font-weight: 400;
+  color: rgb(61, 61, 61);
+  margin-bottom: 40px;
+  font-family: Spartan;
+
+  span {
+    font-family: Spartan, sans-serif;
+    font-weight: 600;
+  }
+
+  &.bigger {
+    font-size: 50px;
+    color: rgb(250, 250, 250);
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: 900px) and (max-width: 1249px) {
+    font-size: 45px;
+
+    &.bigger {
+      font-size: 42px;
+      margin-bottom: 42px;
+    }
+  }
+  @media (max-width: 750px) {
+    font-size: 26px;
+    &.bigger {
+      font-size: 28px;
+      margin-bottom: 32px;
+    }
+  }
+`
+
+export const H3 = styled.h3`
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(61, 61, 61);
+  font-family: Spartan;
+
+  span {
+    font-family: Spartan, sans-serif;
+    font-weight: 600;
+  }
+`
+
+export const Paragraph = styled.p`
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(61, 61, 61);
+
+  &.bigger {
+    font-size: 21px;
+    font-weight: 400;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 15px;
+    &.bigger {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    font-weight: 400;
+    &.bigger {
+      font-size: 16px;
+    }
+  }
+`

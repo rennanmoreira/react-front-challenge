@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { useLoaderData, Outlet, Form, NavLink, useNavigation, Link } from 'react-router-dom'
-import { Div, Flex, Grid } from '../styled.css.ts'
+import { Div, Flex, Grid, Row, Column } from '../styled.css.ts'
 import LogoCannect from '@/assets/cannect-logo.png'
 import Payments from '@/assets/payments.png'
 import Endeavor from '@/assets/endeavor.png'
@@ -19,6 +19,7 @@ const H3 = styled.h3`
   font-weight: 600;
   color: white;
   margin-bottom: 40px;
+  font-family: Spartan;
 `
 
 const FooterForm = styled(Form)`
@@ -36,18 +37,20 @@ const FooterForm = styled(Form)`
   color: white;
 
   input {
-    font-weight: 500;
-    font-size: '14px';
+    font-weight: 600;
+    font-size: 14px;
   }
 `
 
-const FlexStart = styled(Flex)`
+const ColumnStart = styled(Column)`
   flex-direction: column;
   align-items: flex-start;
   -webkit-box-pack: start;
   justify-content: flex-start;
   min-width: 300px;
   width: auto;
+  padding: 4px;
+  margin-top: 10px;
 `
 
 const Root = styled(Flex)`
@@ -72,8 +75,8 @@ function Footer() {
   return (
     <>
       <Root as="footer">
-        <Flex style={{ gap: '56px' }}>
-          <FlexStart style={{ alignSelf: 'center' }}>
+        <Row>
+          <ColumnStart $xs="12" $md="6" $lg="3" style={{ alignSelf: 'center' }}>
             <Flex style={{ WebkitBoxAlign: 'center', alignItems: 'center' }}>
               <img
                 alt="logo-cannect"
@@ -81,9 +84,9 @@ function Footer() {
                 style={{ width: '203px', height: '34px' }}
               />
             </Flex>
-          </FlexStart>
-          <FlexStart>
-            <H3 style={{ fontWeight: 700, width: '294px', fontSize: '16px' }}>
+          </ColumnStart>
+          <ColumnStart $xs="12" $md="6" $lg="3">
+            <H3 style={{ fontSize: '16px', marginBottom: '0px' }}>
               Assine a newsletter da Cannect para estar sempre informado sobre a #revoluçãoverde
             </H3>
             <div style={{ width: '100%' }}>
@@ -96,11 +99,11 @@ function Footer() {
                   <div style={{ marginBottom: '10px' }}>
                     <label
                       htmlFor="fullname"
-                      style={{ fontWeight: 'bold', marginBottom: '5px' }}
+                      style={{ fontWeight: 'bold', marginBottom: '5px', display: 'block' }}
                     >
                       Nome completo*
                     </label>
-                    <div className="_field-wrapper">
+                    <div style={{ fontFamily: 'Nunito' }}>
                       <input
                         id="fullname"
                         name="fullname"
@@ -131,7 +134,7 @@ function Footer() {
                     >
                       Email*
                     </label>
-                    <div className="_field-wrapper">
+                    <div style={{ fontFamily: 'Nunito' }}>
                       <input
                         id="email"
                         name="email"
@@ -171,8 +174,8 @@ function Footer() {
                 </div>
               </FooterForm>
             </div>
-          </FlexStart>
-          <FlexStart style={{ marginTop: '32px' }}>
+          </ColumnStart>
+          <ColumnStart $xs="12" $md="6" $lg="3" style={{ marginTop: '32px' }}>
             <H3>Acesso rápido:</H3>
             <Flex
               style={{ gap: '26px', WebkitBoxPack: 'justify', justifyContent: 'space-between' }}
@@ -197,8 +200,8 @@ function Footer() {
                 <Link to={'perguntas-frequentes"'}>FAQ</Link>
               </Grid>
             </Flex>
-          </FlexStart>
-          <FlexStart>
+          </ColumnStart>
+          <ColumnStart $xs="12" $md="6" $lg="3">
             <H3>Fale conosco</H3>
             <a href="mailto:faleconosco@cannect.com.br" target="blank">
               faleconosco@cannect.com.br
@@ -248,25 +251,25 @@ function Footer() {
                 />
               </a>
             </Flex>
-          </FlexStart>
-        </Flex>
-        <Flex style={{ gap: '56px', marginTop: '64px' }}>
-          <FlexStart style={{ alignSelf: 'center' }}>
+          </ColumnStart>
+        </Row>
+        <Row style={{ gap: '56px', marginTop: '64px' }}>
+          <ColumnStart style={{ alignSelf: 'center' }}>
             <Paragraph>
               CANNECT SERVIÇOS DE INTERNET S/A - CNPJ: 41.418.943/0001-16 R. Dr. Renato Paes de
               Barros, 33 - Itaim Bibi, São Paulo - SP, 04530-000
             </Paragraph>
-          </FlexStart>
-          <FlexStart>
-            <Paragraph>Meios de pagamento</Paragraph>
+          </ColumnStart>
+          <ColumnStart>
+            <Paragraph style={{ marginBottom: '14px' }}>Meios de pagamento</Paragraph>
             <img alt="meios de pagamento" src={Payments} />
-          </FlexStart>
-          <FlexStart />
-          <FlexStart>
+          </ColumnStart>
+          <ColumnStart />
+          <ColumnStart>
             <Paragraph>Fazemos parte do programa</Paragraph>
             <img alt="endeavor logo" src={Endeavor} />
-          </FlexStart>
-        </Flex>
+          </ColumnStart>
+        </Row>
       </Root>
     </>
   )

@@ -1,7 +1,7 @@
-import styled, { StyleFunction } from 'styled-components'
+import styled from 'styled-components'
 
-type ButtonRootProps= {
-  variant: string;
+type ButtonRootProps = {
+  variant: string
 }
 
 export const Root = styled.button<ButtonRootProps>`
@@ -29,7 +29,9 @@ export const Root = styled.button<ButtonRootProps>`
     color: white;
   }
 
-  ${({ variant }) => variant === 'secondary' && `
+  ${({ variant }) =>
+    variant === 'secondary' &&
+    `
     background: white;
     border: 2px solid rgb(33, 151, 110);
 
@@ -38,7 +40,9 @@ export const Root = styled.button<ButtonRootProps>`
     }
   `}
 
-  ${({ variant }) => variant === 'tertiary' && `
+  ${({ variant }) =>
+    variant === 'tertiary' &&
+    `
       background: transparent;
       border: 2px solid rgb(217, 217, 217);
       width: 222px;
@@ -53,7 +57,9 @@ export const Root = styled.button<ButtonRootProps>`
       }
     `}
 
-  ${({ variant }) => variant === 'quaternary' && `
+  ${({ variant }) =>
+    variant === 'quaternary' &&
+    `
       border: none;
       background: rgb(240, 120, 10);
 
@@ -64,19 +70,20 @@ export const Root = styled.button<ButtonRootProps>`
     `}
 `
 
-
-interface ButtonProps  {
-  title: string;
-  variant?: string;
+interface ButtonProps {
+  title: string
+  variant?: string
+  className?: string
+  style?: React.CSSProperties
 }
-  const Button = ({ title = 'Button', variant = 'primary' }: ButtonProps) => {
-    return (
-      <>
-        <Root variant={variant}>
-          <p>{title}</p>
-        </Root>
-      </>
-    )
-  }
+const Button = ({ title = 'Button', variant = 'primary', className, style }: ButtonProps) => {
+  return (
+    <>
+      <Root variant={variant} className={className} style={style}>
+        <p>{title}</p>
+      </Root>
+    </>
+  )
+}
 
-  export default Button
+export default Button

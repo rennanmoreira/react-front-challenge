@@ -89,18 +89,18 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para empresa [Cann
 <input type="checkbox" checked/>Home - Seção 9 - Leia aqui as novidades<br/>
 <input type="checkbox" checked/>Componente Footer<br/>
 <input type="checkbox" checked/>Utilizar scss, flex e css grid<br/>
-<input type="checkbox"/>Responsividade com media-queries<br/>
+<input type="checkbox" checked/>Responsividade com media-queries<br/>
 <input type="checkbox" checked/>Background superior esquerdo levemente esverdeado<br/>
 <input type="checkbox" checked/>Background inferior direito levemente esverdeado (fixo)<br/>
-<input type="checkbox"/>Dialogo para perguntar sobre Cookies<br/>
-<input type="checkbox"/>Banner desktop - Comece seu tratamento inicial<br/>
-<input type="checkbox"/>Componente fale conosco com formulário em dialogo<br/>
-<input type="checkbox"/>Componente Whatsapp<br/>
 <input type="checkbox" checked/>Adicionando ESLint<br/>
 <input type="checkbox" checked/>Adicionando Prettier<br/>
 
 ## Requisitos V2
 
+<input type="checkbox"/>Dialogo para perguntar sobre Cookies<br/>
+<input type="checkbox"/>Banner desktop - Comece seu tratamento inicial<br/>
+<input type="checkbox"/>Componente fale conosco com formulário em dialogo<br/>
+<input type="checkbox"/>Componente Whatsapp<br/>
 <input type="checkbox" />Desenvolver com TDD<br/>
 <input type="checkbox" />Criar manifest e service work para PWA<br/>
 <input type="checkbox" />Validar PWA passando no PWABuilder<br/>

@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Flex } from '../styled.css.ts'
-import Logo from '@/assets/logo2.svg'
-import LoginUserIcon from '@/assets/loginUser.svg'
+import Logo from '@/assets/logo-cannect.svg'
+import LoginUserIcon from '@/assets/login-user.svg'
+import MenuIcon from '@/assets/menu.svg'
 
 const LoginButton = styled.span`
   font-family: ITC Avant Garde Gothic Std;
@@ -12,14 +13,22 @@ const LoginButton = styled.span`
 `
 
 const Root = styled(Flex)`
-  align-items: center;
-  justify-content: center;
   background-color: white;
   border-bottom: 1px solid rgb(217, 217, 217);
   height: 120px;
   position: fixed;
   width: 100%;
   z-index: 100;
+  top: 0;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+
+  @media (max-width: 1030px) {
+    height: 110px;
+  }
 
   a {
     text-decoration: none;
@@ -31,6 +40,88 @@ const Root = styled(Flex)`
 
   section > a {
     margin: 6px;
+
+    @media (max-width: 1200px) {
+      margin: 0px;
+    }
+  }
+
+  .menu {
+    img {
+      width: 162px;
+      margin-right: 20px;
+
+      @media (min-width: 1030px) {
+        width: 135px;
+      }
+
+      @media (min-width: 1290px) {
+        width: 200px;
+      }
+    }
+  }
+
+  @media (max-width: 1250px) {
+    .btn-login {
+      display: none;
+    }
+  }
+
+  .menu-close {
+    margin-top: 4px;
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(61, 61, 61);
+    transition: transform 0.3s ease 0s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 1250px) {
+      display: initial;
+    }
+  }
+
+  .menu-links {
+    gap: 24px;
+    width: 100%;
+    place-items: center;
+    place-content: center;
+
+    @media (max-width: 1030px) {
+      display: none;
+    }
+
+    @media (max-width: 1130px) {
+      gap: 14px;
+    }
+
+    @media (max-width: 1070px) {
+      gap: 12px;
+
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .container {
+    padding: 1.8rem 52px;
+    width: 100%;
+    max-width: 1440px;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: 1030px) and (max-width: 1290px) {
+      padding: 1.8rem 42px;
+    }
+
+    @media (max-width: 900px) {
+      padding: 1.8rem 32px;
+    }
   }
 `
 
@@ -38,33 +129,12 @@ export default function Component() {
   return (
     <>
       <Root as="header">
-        <Flex
-          as="nav"
-          style={{
-            width: '100%',
-            maxWidth: '1440px',
-            padding: '1.8rem 52px',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
-        >
+        <Flex className="container">
           <Flex as="nav" className="menu" style={{ width: '100%' }}>
-            <Link to={'/'}>
-              <img
-                alt="logo cannect"
-                src={Logo}
-                style={{ marginRight: '20px', width: '200px' }}
-              />
+            <Link to={'/'} style={{ alignSelf: 'center' }}>
+              <img alt="logo cannect" src={Logo} />
             </Link>
-            <Flex
-              as="section"
-              style={{
-                gap: '24px',
-                width: '100%',
-                placeItems: 'center',
-                placeContent: 'center',
-              }}
-            >
+            <Flex as="section" className="menu-links">
               <Link to={'/produtos'}>produtos</Link>
               <Link to={'/agendamento'}>agende sua consulta</Link>
               <Link to={'#'} style={{ margin: '0px' }}>
@@ -78,7 +148,7 @@ export default function Component() {
             </Flex>
           </Flex>
           <div>
-            <div id="modalLogin" style={{ width: '80px' }}>
+            <div className="btn-login" style={{ width: '80px' }}>
               <Link to={'/login'}>
                 <Flex style={{ alignItems: 'center' }}>
                   <img alt="login user icon" src={LoginUserIcon} />
@@ -86,6 +156,10 @@ export default function Component() {
                 </Flex>
               </Link>
             </div>
+
+            <button className="menu-close">
+              <img src={MenuIcon} alt="menu-icon" width="33" height="29" />
+            </button>
           </div>
         </Flex>
       </Root>

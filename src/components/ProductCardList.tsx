@@ -28,7 +28,8 @@ const linksData = [
     toPath: '/produtos/1?shape_id=29',
   },
 ]
-const ProductCards = () => {
+
+const ProductCardList = () => {
   return (
     <>
       {linksData.map(({ alt, src, toPath }, id) => {
@@ -38,4 +39,4 @@ const ProductCards = () => {
   )
 }
 
-export default ProductCards
+export default ProductCardList
