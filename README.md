@@ -38,40 +38,39 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para empresa [Cann
 <div style="text-align: left; display: grid; grid-template-columns: 1fr 1fr 1fr;">
   <div>
 
-  - [Git](https://git-scm.com/)
-  - [Yarn](https://yarnpkg.com/)
-  - [ESLint](https://eslint.org/)
-  - [Prettier](https://prettier.io/)
-  - [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5)
-  - [TypeScript](https://www.typescriptlang.org/)
+ - [Git](https://git-scm.com/)
+ - [Yarn](https://yarnpkg.com/)
+ - [ESLint](https://eslint.org/)
+ - [Prettier](https://prettier.io/)
+ - [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5)
+ - [TypeScript](https://www.typescriptlang.org/)
   <!-- - [i18next](https://www.i18next.com/) -->
   </div>
   <div>
 
-  - [TDD](https://pt.wikipedia.org/wiki/Test-driven_development)
-  - [PWA](https://web.dev/progressive-web-apps/)
-  - [Cypress](https://www.cypress.io/)
-  - [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-  - [SCSS](https://sass-lang.com/)
-  - [FontAwesome](https://fontawesome.com/)
+ - [TDD](https://pt.wikipedia.org/wiki/Test-driven_development)
+ - [PWA](https://web.dev/progressive-web-apps/)
+ - [Cypress](https://www.cypress.io/)
+ - [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+ - [SCSS](https://sass-lang.com/)
+ - [FontAwesome](https://fontawesome.com/)
   <!-- - [Sentry](https://sentry.io/welcome/) -->
   </div>
   <div>
 
-  - [ReactJS](https://reactjs.org/)
-  - [Vite](https://vitejs.dev/)
-  - [Vitest](https://vitest.dev/)
-  - [SWC](https://swc.rs/)
-  - [React Router](https://reactrouter.com/)
-  - [Styled Components](https://styled-components.com/)
+ - [ReactJS](https://reactjs.org/)
+ - [Vite](https://vitejs.dev/)
+ - [Vitest](https://vitest.dev/)
+ - [SWC](https://swc.rs/)
+ - [React Router](https://reactrouter.com/)
+ - [Styled Components](https://styled-components.com/)
     <!-- - [React Hook Form](https://react-hook-form.com/) -->
     </div>
   </div>
 
 ## Requisitos V1 (Concluído)
 
-<!-- :white_check_mark: -->
-<!-- :white_large_square:  -->
+Esses requisitos foram os que priorizei para atender o básico, e nessa versão eu tentei ser o mais fiel ao layout original. Por isso para testar a fidelidade use a versão v1.1, essas versões podem ser encontradas pelos commits.
 
 <input type="checkbox" checked/>Componente NavBar<br/>
 <input type="checkbox" checked/>HTML Semántico<br/>
@@ -95,48 +94,52 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para empresa [Cann
 <input type="checkbox" checked/>Adicionando ESLint<br/>
 <input type="checkbox" checked/>Adicionando Prettier<br/>
 
-
 ## Requisitos V2 (Fazendo)
+
+Nessa segunda versão eu estou implementando melhorias de acordo com a minha experiencia, então em alguns casos pode ser que algum componente ou responsividade distoe do original. Porém acredito que essas mudanças vão tornar a experiencia do usuário melhor.
+
 <input type="checkbox" checked/>Home: Cards usando Paralax<br/>
 
 ## Requisitos V3 (A fazer)
+
+Esses requisitos são os que eu acho que seriam interessantes para o projeto, mas que ainda não consegui implementar.
 
 <input type="checkbox"/>Dialogo para perguntar sobre Cookies<br/>
 <input type="checkbox"/>Banner desktop - Comece seu tratamento inicial<br/>
 <input type="checkbox"/>Componente fale conosco com formulário em dialogo<br/>
 <input type="checkbox"/>Componente Whatsapp<br/>
-<input type="checkbox" />Desenvolver com TDD<br/>
-<input type="checkbox" />Criar manifest e service work para PWA<br/>
-<input type="checkbox" />Validar PWA passando no PWABuilder<br/>
-<input type="checkbox" />Rodar cypress para cenários de usuários<br/>
-<input type="checkbox" />Chamada RestAPI para algum formulário<br/>
-<input type="checkbox" />Criar uma RestAPI servir requests JSON<br/>
-<input type="checkbox" />Fale conosco em Modal<br/>
-<input type="checkbox" />Login em Modal ou no Top Bar<br/>
-<input type="checkbox" />Home: Titulo "cannabis medicinal" com font-weigh 700<br/>
-<input type="checkbox" />Home: Cards em carousel animado com cards pausando e expandindo no hover<br/>
-<input type="checkbox" />Home: footer "saiba mais" nos cards "cuidamos de voce"<br/>
-<input type="checkbox" />Home: Adicionar letter-spacing de 0.1px para corrigir quando tem escrito "fi" e etc.<br/>
-<input type="checkbox" />Home: Padronizar botoes/links de saiba mais<br/>
-<input type="checkbox" />Home: Criar mais animações e efeitos<br/>
-<input type="checkbox" />Home: Linkar imagens sem links<br/>
-<input type="checkbox" />Footer: Ajustar altura do "Acesso Rápido" com "Fale Conosco" e reordernar<br/>
-<input type="checkbox" />Footer: Mudar cor do botão do assinar newsletter de azul para laranja (#eb903d) e aumentar tamanho<br/>
-<input type="checkbox" />Footer: "Assine a newsletter" com fonte menor<br/>
-<input type="checkbox" />Footer: Licença com ano automático © 2023 Cannect <br/>
-<input type="checkbox" />Implementar i18n<br/>
-<input type="checkbox" />Adicionar internacionalização para Ingles<br/>
-<input type="checkbox" />Adicionar internacionalização para Espanhol<br/>
-<input type="checkbox" />Produtos<br/>
-<input type="checkbox" />Produtos: Loadings contextuais<br/>
-<input type="checkbox" />Agenda sua consulta<br/>
-<input type="checkbox" />Tratamentos<br/>
-<input type="checkbox" />Para profissionais da Saúde<br/>
-<input type="checkbox" />Para parceiros<br/>
-<input type="checkbox" />Blog<br/>
-<input type="checkbox" />Blog: Criar modo mansonry/pinterest<br/>
-<input type="checkbox" />Adicionar Sentry<br/>
-<input type="checkbox" />Adicionar React Hook Form<br/>
+<input type="checkbox"/>Desenvolver com TDD<br/>
+<input type="checkbox"/>Criar manifest e service work para PWA<br/>
+<input type="checkbox"/>Validar PWA passando no PWABuilder<br/>
+<input type="checkbox"/>Rodar cypress para cenários de usuários<br/>
+<input type="checkbox"/>Chamada RestAPI para algum formulário<br/>
+<input type="checkbox"/>Criar uma RestAPI servir requests JSON<br/>
+<input type="checkbox"/>Fale conosco em Modal<br/>
+<input type="checkbox"/>Login em Modal ou no Top Bar<br/>
+<input type="checkbox"/>Home: Titulo "cannabis medicinal" com font-weigh 700<br/>
+<input type="checkbox"/>Home: Cards em carousel animado com cards pausando e expandindo no hover<br/>
+<input type="checkbox"/>Home: footer "saiba mais" nos cards "cuidamos de voce"<br/>
+<input type="checkbox"/>Home: Adicionar letter-spacing de 0.1px para corrigir quando tem escrito "fi" e etc.<br/>
+<input type="checkbox"/>Home: Padronizar botoes/links de saiba mais<br/>
+<input type="checkbox"/>Home: Criar mais animações e efeitos<br/>
+<input type="checkbox"/>Home: Linkar imagens sem links<br/>
+<input type="checkbox"/>Footer: Ajustar altura do "Acesso Rápido" com "Fale Conosco" e reordernar<br/>
+<input type="checkbox"/>Footer: Mudar cor do botão do assinar newsletter de azul para laranja (#eb903d) e aumentar tamanho<br/>
+<input type="checkbox"/>Footer: "Assine a newsletter" com fonte menor<br/>
+<input type="checkbox"/>Footer: Licença com ano automático © 2023 Cannect <br/>
+<input type="checkbox"/>Implementar i18n<br/>
+<input type="checkbox"/>Adicionar internacionalização para Ingles<br/>
+<input type="checkbox"/>Adicionar internacionalização para Espanhol<br/>
+<input type="checkbox"/>Produtos<br/>
+<input type="checkbox"/>Produtos: Loadings contextuais<br/>
+<input type="checkbox"/>Agenda sua consulta<br/>
+<input type="checkbox"/>Tratamentos<br/>
+<input type="checkbox"/>Para profissionais da Saúde<br/>
+<input type="checkbox"/>Para parceiros<br/>
+<input type="checkbox"/>Blog<br/>
+<input type="checkbox"/>Blog: Criar modo mansonry/pinterest<br/>
+<input type="checkbox"/>Adicionar Sentry<br/>
+<input type="checkbox"/>Adicionar React Hook Form<br/>
 
 ## Observações
 
