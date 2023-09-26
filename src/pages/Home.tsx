@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import ProductCards from '../components/ProductCardList.tsx'
 import Button from '../components/Button'
 import { HealthCardList } from '../components/HealthCardList.tsx'
+import Tilt from 'react-parallax-tilt'
 import '@/assets/styles/home.scss'
 
 const img = styled.img`
@@ -136,22 +137,28 @@ const Home = () => {
                 </ButtonsContainer>
               </TextSection>
               <BannerSection>
-                <BannerImage
-                  className="hide-for-tablet"
-                  src="https://www.cannect.life/static/media/banner-image-1.c2bdae1e8783e153b00f.webp"
-                  alt="banner"
-                  style={{ marginTop: '-34px' }}
-                />
-                <BannerImage
-                  className="hide-for-tablet"
-                  src="https://www.cannect.life/static/media/banner-image-2.69443d255f1ca027ad58.webp"
-                  alt="banner"
-                />
-                <BannerImage
-                  className="show-for-desktop-and-down hide-for-tablet-and-down"
-                  src="https://www.cannect.life/static/media/banner-image-medium.d5777403240a0ee77cb8.png"
-                  alt="banner"
-                />
+                <Tilt>
+                  <BannerImage
+                    className="hide-for-tablet"
+                    src="https://www.cannect.life/static/media/banner-image-1.c2bdae1e8783e153b00f.webp"
+                    alt="oleo cannabis medicinal"
+                    style={{ marginTop: '-34px' }}
+                  />
+                </Tilt>
+                <Tilt>
+                  <BannerImage
+                    className="hide-for-tablet"
+                    src="https://www.cannect.life/static/media/banner-image-2.69443d255f1ca027ad58.webp"
+                    alt="gummies com cbd de cannabis medicinal"
+                  />
+                </Tilt>
+                <Tilt>
+                  <BannerImage
+                    className="show-for-desktop-and-down hide-for-tablet-and-down"
+                    src="https://www.cannect.life/static/media/banner-image-medium.d5777403240a0ee77cb8.png"
+                    alt="oleo cannabis medicinal"
+                  />
+                </Tilt>
               </BannerSection>
             </Section>
 
@@ -167,33 +174,45 @@ const Home = () => {
                 <span>Seu caminho</span> para uma <span>vida melhor:</span>
               </H2>
               <Flex className="start-treatment hide-for-tablet-and-down">
-                <img
-                  alt="não tenho receita"
-                  src="https://www.cannect.life/static/media/nao-tenho-receita.9c7b86ff6dd86a16a7d7.png"
-                />
-                <img
-                  alt="Receita Branca"
-                  src="https://www.cannect.life/static/media/receita-branca.96ba82ca0a81b75b0e99.png"
-                />
-                <img
-                  alt="Receita especial"
-                  src="https://www.cannect.life/static/media/receita-especial.863307e14bad6e71f3c9.png"
-                />
+                <Tilt>
+                  <img
+                    alt="não tenho receita"
+                    src="https://www.cannect.life/static/media/nao-tenho-receita.9c7b86ff6dd86a16a7d7.png"
+                  />
+                </Tilt>
+                <Tilt>
+                  <img
+                    alt="Receita Branca"
+                    src="https://www.cannect.life/static/media/receita-branca.96ba82ca0a81b75b0e99.png"
+                  />
+                </Tilt>
+                <Tilt>
+                  <img
+                    alt="Receita especial"
+                    src="https://www.cannect.life/static/media/receita-especial.863307e14bad6e71f3c9.png"
+                  />
+                </Tilt>
               </Flex>
               <div className=" show-for-tablet-and-down">
                 <Flex className="start-treatment">
-                  <img
-                    alt="não tenho receita"
-                    src="https://www.cannect.life/static/media/nao-tenho-receita-mobile.24b692f9c139ad419b3b.png"
-                  />
-                  <img
-                    alt="Receita Branca"
-                    src="https://www.cannect.life/static/media/receita-branca-mobile.f8455d05cc8b93f31292.png"
-                  />
-                  <img
-                    alt="Receita especial"
-                    src="https://www.cannect.life/static/media/receita-especial-mobile.a71a2b30080bd3bbf56f.png"
-                  />
+                  <Tilt>
+                    <img
+                      alt="não tenho receita"
+                      src="https://www.cannect.life/static/media/nao-tenho-receita-mobile.24b692f9c139ad419b3b.png"
+                    />
+                  </Tilt>
+                  <Tilt>
+                    <img
+                      alt="Receita Branca"
+                      src="https://www.cannect.life/static/media/receita-branca-mobile.f8455d05cc8b93f31292.png"
+                    />
+                  </Tilt>
+                  <Tilt>
+                    <img
+                      alt="Receita especial"
+                      src="https://www.cannect.life/static/media/receita-especial-mobile.a71a2b30080bd3bbf56f.png"
+                    />
+                  </Tilt>
                 </Flex>
               </div>
             </Section>
@@ -231,11 +250,13 @@ const Home = () => {
                     className="center-on-mobile"
                   />
                 </Flex>
-                <img
-                  className="hide-for-tablet-and-down"
-                  alt="about us logos"
-                  src="https://www.cannect.life/static/media/about-us-logos.d6f1eb10f2272cb0b230.png"
-                />
+                <Tilt>
+                  <img
+                    className="hide-for-tablet-and-down"
+                    alt="about us logos"
+                    src="https://www.cannect.life/static/media/about-us-logos.d6f1eb10f2272cb0b230.png"
+                  />
+                </Tilt>
               </Flex>
             </Section>
 
@@ -361,10 +382,26 @@ const Home = () => {
                   }}
                 >
                   <Row className="center-for-mobile">
-                    <Column $md="6" $lg="5" style={{ padding: '10px 10px 0px 0px' }}>
+                    <Column
+                      $sm="12"
+                      $sl="12"
+                      $md="6"
+                      $lg="12"
+                      $xl="6"
+                      className="center-for-mobile"
+                      style={{ padding: '10px 10px 0px 0px' }}
+                    >
                       <Button title={'Agende sua consulta'} variant="quaternary" />
                     </Column>
-                    <Column $md="6" $lg="5" style={{ padding: '10px 10px 0px 0px' }}>
+                    <Column
+                      $sm="12"
+                      $sl="12"
+                      $md="6"
+                      $lg="12"
+                      $xl="6"
+                      className="center-for-mobile"
+                      style={{ padding: '10px 10px 0px 0px' }}
+                    >
                       <Button title={'Inicie seu tratamento'} variant="secondary" />
                     </Column>
                   </Row>
@@ -381,11 +418,13 @@ const Home = () => {
                     marginLeft: '30px',
                   }}
                 >
-                  <img
-                    className="hide-for-tablet-and-down"
-                    alt="atleta subindo escadas"
-                    src="https://www.cannect.life/static/media/info-banner-image.194c0052dd5a3c7c928f.webp"
-                  />
+                  <Tilt tiltMaxAngleX={6} tiltMaxAngleY={6}>
+                    <img
+                      className="hide-for-tablet-and-down"
+                      alt="atleta subindo escadas"
+                      src="https://www.cannect.life/static/media/info-banner-image.194c0052dd5a3c7c928f.webp"
+                    />
+                  </Tilt>
                 </Flex>
               </Flex>
             </Section>
@@ -418,20 +457,22 @@ const Home = () => {
                     alignItems: 'center',
                   }}
                 >
-                  <img
-                    alt="Profile picture"
-                    src="https://strapi.cannect.life/uploads/julia_38cba9a83c.jpeg"
-                    style={{
-                      borderRadius: '20px',
-                      height: '275px',
-                      width: '252px',
-                      minHeight: '275px',
-                      minWidth: '252px',
-                      maxHeight: '275px',
-                      maxWidth: '252px',
-                      objectFit: 'cover',
-                    }}
-                  />
+                  <Tilt>
+                    <img
+                      alt="Profile picture"
+                      src="https://strapi.cannect.life/uploads/julia_38cba9a83c.jpeg"
+                      style={{
+                        borderRadius: '20px',
+                        height: '275px',
+                        width: '252px',
+                        minHeight: '275px',
+                        minWidth: '252px',
+                        maxHeight: '275px',
+                        maxWidth: '252px',
+                        objectFit: 'cover',
+                      }}
+                    />
+                  </Tilt>
                   <H3
                     style={{
                       gap: '10px',
@@ -490,20 +531,22 @@ const Home = () => {
                     alignItems: 'center',
                   }}
                 >
-                  <img
-                    alt="Profile picture"
-                    src="https://strapi.cannect.life//uploads/elaine_e_seu_filho_7969358314.jpeg"
-                    style={{
-                      borderRadius: '20px',
-                      height: '275px',
-                      width: '252px',
-                      minHeight: '275px',
-                      minWidth: '252px',
-                      maxHeight: '275px',
-                      maxWidth: '252px',
-                      objectFit: 'cover',
-                    }}
-                  />
+                  <Tilt>
+                    <img
+                      alt="Profile picture"
+                      src="https://strapi.cannect.life//uploads/elaine_e_seu_filho_7969358314.jpeg"
+                      style={{
+                        borderRadius: '20px',
+                        height: '275px',
+                        width: '252px',
+                        minHeight: '275px',
+                        minWidth: '252px',
+                        maxHeight: '275px',
+                        maxWidth: '252px',
+                        objectFit: 'cover',
+                      }}
+                    />
+                  </Tilt>
                   <H3
                     style={{
                       gap: '10px',
@@ -565,20 +608,22 @@ const Home = () => {
                     alignItems: 'center',
                   }}
                 >
-                  <img
-                    alt="Profile picture"
-                    src="https://strapi.cannect.life//uploads/Soraia_Lopes_3b05849076.jpeg"
-                    style={{
-                      borderRadius: '20px',
-                      height: '275px',
-                      width: '252px',
-                      minHeight: '275px',
-                      minWidth: '252px',
-                      maxHeight: '275px',
-                      maxWidth: '252px',
-                      objectFit: 'cover',
-                    }}
-                  />
+                  <Tilt>
+                    <img
+                      alt="Profile picture"
+                      src="https://strapi.cannect.life//uploads/Soraia_Lopes_3b05849076.jpeg"
+                      style={{
+                        borderRadius: '20px',
+                        height: '275px',
+                        width: '252px',
+                        minHeight: '275px',
+                        minWidth: '252px',
+                        maxHeight: '275px',
+                        maxWidth: '252px',
+                        objectFit: 'cover',
+                      }}
+                    />
+                  </Tilt>
                   <H3
                     style={{
                       gap: '10px',
@@ -637,20 +682,22 @@ const Home = () => {
                     alignItems: 'center',
                   }}
                 >
-                  <img
-                    alt="Profile picture"
-                    src="https://strapi.cannect.life//uploads/Luciana_Falcao_d96695cbdc.jpg"
-                    style={{
-                      borderRadius: '20px',
-                      height: '275px',
-                      width: '252px',
-                      minHeight: '275px',
-                      minWidth: '252px',
-                      maxHeight: '275px',
-                      maxWidth: '252px',
-                      objectFit: 'cover',
-                    }}
-                  />
+                  <Tilt>
+                    <img
+                      alt="Profile picture"
+                      src="https://strapi.cannect.life//uploads/Luciana_Falcao_d96695cbdc.jpg"
+                      style={{
+                        borderRadius: '20px',
+                        height: '275px',
+                        width: '252px',
+                        minHeight: '275px',
+                        minWidth: '252px',
+                        maxHeight: '275px',
+                        maxWidth: '252px',
+                        objectFit: 'cover',
+                      }}
+                    />
+                  </Tilt>
                   <H3
                     style={{
                       gap: '10px',
@@ -709,20 +756,22 @@ const Home = () => {
                     alignItems: 'center',
                   }}
                 >
-                  <img
-                    alt="Profile picture"
-                    src="https://strapi.cannect.life//uploads/Whats_App_Image_2022_04_19_at_18_05_35_1a4e19322a.jpeg"
-                    style={{
-                      borderRadius: '20px',
-                      height: '275px',
-                      width: '252px',
-                      minHeight: '275px',
-                      minWidth: '252px',
-                      maxHeight: '275px',
-                      maxWidth: '252px',
-                      objectFit: 'cover',
-                    }}
-                  />
+                  <Tilt>
+                    <img
+                      alt="Profile picture"
+                      src="https://strapi.cannect.life//uploads/Whats_App_Image_2022_04_19_at_18_05_35_1a4e19322a.jpeg"
+                      style={{
+                        borderRadius: '20px',
+                        height: '275px',
+                        width: '252px',
+                        minHeight: '275px',
+                        minWidth: '252px',
+                        maxHeight: '275px',
+                        maxWidth: '252px',
+                        objectFit: 'cover',
+                      }}
+                    />
+                  </Tilt>
                   <H3
                     style={{
                       gap: '10px',
@@ -913,6 +962,7 @@ const Home = () => {
                     </Paragraph>
                   </Flex>
                 </Link>
+
                 <Link
                   to={'/blog/novidades/site-da-cannalize-esta-de-cara-nova-confira-as-mudancas'}
                 >

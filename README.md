@@ -68,7 +68,7 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para empresa [Cann
     </div>
   </div>
 
-## Requisitos V1
+## Requisitos V1 (Concluído)
 
 <!-- :white_check_mark: -->
 <!-- :white_large_square:  -->
@@ -95,7 +95,11 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para empresa [Cann
 <input type="checkbox" checked/>Adicionando ESLint<br/>
 <input type="checkbox" checked/>Adicionando Prettier<br/>
 
-## Requisitos V2
+
+## Requisitos V2 (Fazendo)
+<input type="checkbox" checked/>Home: Cards usando Paralax<br/>
+
+## Requisitos V3 (A fazer)
 
 <input type="checkbox"/>Dialogo para perguntar sobre Cookies<br/>
 <input type="checkbox"/>Banner desktop - Comece seu tratamento inicial<br/>
@@ -110,7 +114,6 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para empresa [Cann
 <input type="checkbox" />Fale conosco em Modal<br/>
 <input type="checkbox" />Login em Modal ou no Top Bar<br/>
 <input type="checkbox" />Home: Titulo "cannabis medicinal" com font-weigh 700<br/>
-<input type="checkbox" />Home: Cards usando Paralax<br/>
 <input type="checkbox" />Home: Cards em carousel animado com cards pausando e expandindo no hover<br/>
 <input type="checkbox" />Home: footer "saiba mais" nos cards "cuidamos de voce"<br/>
 <input type="checkbox" />Home: Adicionar letter-spacing de 0.1px para corrigir quando tem escrito "fi" e etc.<br/>

@@ -1,4 +1,5 @@
 import Card from './Card'
+import Tilt from 'react-parallax-tilt'
 
 const linksData = [
   {
@@ -33,7 +34,11 @@ const ProductCardList = () => {
   return (
     <>
       {linksData.map(({ alt, src, toPath }, id) => {
-        return <Card key={id} alt={alt} src={src} toPath={toPath} />
+        return (
+          <Tilt key={id}>
+            <Card alt={alt} src={src} toPath={toPath} />
+          </Tilt>
+        )
       })}
     </>
   )
