@@ -76,11 +76,15 @@ Construí utilizando HTML semántico, no inicio eu tentei construir o layout uti
 
 O Componente que mais gostei de construir foi o Navbar, mas também criei o Footer usando o sistema de Row e Columns para responsividade, componentes de Cards da tela home para serem reutilizados. Também criei componentes de listas de card para isolar a lógica
 
+<input type="checkbox" checked/>Adicionando ESLint<br/>
+<input type="checkbox" checked/>Adicionando Prettier<br/>
 <input type="checkbox" checked/>Componente NavBar<br/>
+<input type="checkbox" checked/>Utilizar scss, flex e css grid<br/>
 <input type="checkbox" checked/>HTML Semántico<br/>
+<input type="checkbox" checked/>Adicionar font: Spartan<br/>
+<input type="checkbox" checked/>Componente Footer<br/>
 <input type="checkbox" checked/>Componente de cards<br/>
 <input type="checkbox" checked/>Componente de botão, com variações e animações<br/>
-<input type="checkbox" checked/>Adicionar font: Spartan<br/>
 <input type="checkbox" checked/>Home - Seção 1 - Inicie seu tratamento<br/>
 <input type="checkbox" checked/>Home - Seção 2 - Seu caminho para uma vida melhor<br/>
 <input type="checkbox" checked/>Home - Seção 3 - Somos o maior ecossistema<br/>
@@ -90,21 +94,17 @@ O Componente que mais gostei de construir foi o Navbar, mas também criei o Foot
 <input type="checkbox" checked/>Home - Seção 7 - Histórias reais<br/>
 <input type="checkbox" checked/>Home - Seção 8 - Parceiros Cannect (usar padrão da /area-parceiros)<br/>
 <input type="checkbox" checked/>Home - Seção 9 - Leia aqui as novidades<br/>
-<input type="checkbox" checked/>Componente Footer<br/>
-<input type="checkbox" checked/>Utilizar scss, flex e css grid<br/>
 <input type="checkbox" checked/>Responsividade com media-queries<br/>
 <input type="checkbox" checked/>Background superior esquerdo levemente esverdeado<br/>
 <input type="checkbox" checked/>Background inferior direito levemente esverdeado (fixo)<br/>
-<input type="checkbox" checked/>Adicionando ESLint<br/>
-<input type="checkbox" checked/>Adicionando Prettier<br/>
 
-## Requisitos V2 (Fazendo)
+## Requisitos V2 (Conclúido)
 
 Nessa segunda versão eu estou implementando melhorias de acordo com a minha experiencia, então em alguns casos pode ser que algum componente ou responsividade distoe do original. Porém acredito que essas mudanças vão tornar a experiencia do usuário melhor.
 
 <input type="checkbox" checked/>Home: Cards usando Paralax<br/>
 
-## Requisitos V3 (A fazer)
+## Requisitos V3 (A fazer - Desejáveis)
 
 Esses requisitos são os que eu acho que seriam interessantes para o projeto, mas que ainda não consegui implementar.
 
