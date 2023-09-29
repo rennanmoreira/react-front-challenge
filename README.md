@@ -72,9 +72,9 @@ Aplicação web desenvolvida em ReactJS construido com o Vite para empresa [Cann
 
 Esses requisitos foram os que priorizei para atender o básico, e nessa versão eu tentei ser o mais fiel ao layout original. Por isso para testar a fidelidade use a versão v1.1, essas versões podem ser encontradas pelos commits.
 
-Construí utilizando HTML semántico, no inicio eu tentei construir o layout utilizando flex e um sistema de Row e Column que eu criei se baseando no bootstrap. Por mais que esse método que criei seja bom pra construir a responsividade, eu percebi que eu teria muitas dificuldades pra adaptar essa estratégia conforme a responsividade do site original, então eu decidi refazer construindo se baseando nas classes e media queries do original. Com isso o Home ficou grande de mais e o ideal seria quebra-lo em seções, mas foquei primeiro em fazer funcionar e acabou não sobrando muito tempo pra isso.
+Construí utilizando HTML semántico, no inicio eu tentei construir o layout utilizando flex e um sistema de Row e Column que eu criei se baseando no bootstrap. Por mais que esse método que criei seja bom pra construir a responsividade, eu percebi que eu teria muitas dificuldades pra adaptar essa estratégia conforme a responsividade do site original, então eu decidi refazer construindo se baseando nas classes e media queries do original.
 
-O Componente que mais gostei de construir foi o Navbar, mas também criei o Footer usando o sistema de Row e Columns para responsividade, componentes de Cards da tela home para serem reutilizados. Também criei componentes de listas de card para isolar a lógica
+O Componente que mais gostei de construir foi o Navbar, mas também criei o Footer usando o sistema de Row e Columns para responsividade e componentes de Cards da tela home para serem reutilizados. Também criei componentes de listas de card para isolar a lógica.
 
 <input type="checkbox" checked/>Adicionando ESLint<br/>
 <input type="checkbox" checked/>Adicionando Prettier<br/>
@@ -100,7 +100,7 @@ O Componente que mais gostei de construir foi o Navbar, mas também criei o Foot
 
 ## Requisitos V2 (Conclúido)
 
-Nessa segunda versão eu estou implementando melhorias de acordo com a minha experiencia, então em alguns casos pode ser que algum componente ou responsividade distoe do original. Porém acredito que essas mudanças vão tornar a experiencia do usuário melhor.
+Nessa segunda versão eu implementeu melhorias de acordo com a minha experiencia, então em alguns casos pode ser que algum componente ou responsividade distoe do original. Porém acredito que essas mudanças vão tornar a experiencia do usuário melhor.
 
 <input type="checkbox" checked/>Home: Cards usando Paralax<br/>
 
