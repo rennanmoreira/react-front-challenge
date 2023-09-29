@@ -1,9 +1,37 @@
 import styled from 'styled-components'
 import { Form, Link } from 'react-router-dom'
-import { Flex, Grid, Row, Column } from '../styled.css.ts'
+import { Flex, Grid, Row, Column as BaseColumn } from './styled.css.ts'
 import LogoCannect from '@/assets/cannect-logo.png'
 import Payments from '@/assets/payments.png'
 import Endeavor from '@/assets/endeavor.png'
+
+const socialMediaLinks = [
+  {
+    href: 'https://www.facebook.com/cannect.life/',
+    alt: 'logo-facebook',
+    src: 'https://www.cannect.life/static/media/facebook-logo.c6c81a5e00e1ebe4e49daec74a5f6e44.svg',
+  },
+  {
+    href: 'https://twitter.com/CannectLife',
+    alt: 'logo-twitter',
+    src: 'https://www.cannect.life/static/media/twitter-logo.56fb2de8cc996a27c9914596673f0e42.svg',
+  },
+  {
+    href: 'https://www.instagram.com/cannect.life/',
+    alt: 'logo-instagram',
+    src: 'https://www.cannect.life/static/media/instagram-logo.09c8d34f4a9b80efeb3976e293564e74.svg',
+  },
+  {
+    href: 'https://www.linkedin.com/company/cannect-saude/',
+    alt: 'logo-linkedin',
+    src: 'https://www.cannect.life/static/media/linkedin-logo.624c549ae048291a7247c0a78140c7c9.svg',
+  },
+  {
+    href: 'https://www.youtube.com/channel/UCElbcDDl-LIQCnag26MmyIg/',
+    alt: 'logo-youtube',
+    src: 'https://www.cannect.life/static/media/youtubeIcon.2f0e6ba9075cbb23f54ba734b7de5e0f.svg',
+  },
+]
 
 const Paragraph = styled.p`
   color: white;
@@ -41,7 +69,7 @@ const FooterForm = styled(Form)`
   }
 `
 
-const ColumnFooter = styled(Column)`
+const Column = styled(BaseColumn)`
   padding: 4px 4px;
   margin-top: 10px;
 `
@@ -119,7 +147,7 @@ function Footer() {
     <>
       <Root as="footer">
         <Row>
-          <ColumnFooter $base={24} $xs="24" $md="12" $lg="5" $xl="4" className="logo-cannect">
+          <Column $base={24} $xs="24" $md="12" $lg="5" $xl="4" className="logo-cannect">
             <Flex style={{ WebkitBoxAlign: 'center', alignItems: 'center' }}>
               <img
                 alt="logo-cannect"
@@ -127,8 +155,8 @@ function Footer() {
                 style={{ width: '203px', height: '34px' }}
               />
             </Flex>
-          </ColumnFooter>
-          <ColumnFooter $base={24} $xs="24" $md="12" $lg="6" $xl="7" className="newsletter">
+          </Column>
+          <Column $base={24} $xs="24" $md="12" $lg="6" $xl="7" className="newsletter">
             <div>
               <H3 style={{ fontSize: '16px', marginBottom: '0px' }}>
                 Assine a newsletter da Cannect para estar sempre informado sobre a
@@ -220,8 +248,8 @@ function Footer() {
                 </FooterForm>
               </div>
             </div>
-          </ColumnFooter>
-          <ColumnFooter $base={24} $xs="24" $md="12" $lg="7" $xl="7" className="fast-access">
+          </Column>
+          <Column $base={24} $xs="24" $md="12" $lg="7" $xl="7" className="fast-access">
             <div>
               <H3>Acesso rápido:</H3>
               <Flex
@@ -252,8 +280,8 @@ function Footer() {
                 </Grid>
               </Flex>
             </div>
-          </ColumnFooter>
-          <ColumnFooter $base={24} $xs="24" $md="12" $lg="6" $xl="6" className="contact">
+          </Column>
+          <Column $base={24} $xs="24" $md="12" $lg="6" $xl="6" className="contact">
             <div>
               <H3>Fale conosco</H3>
               <a href="mailto:faleconosco@cannect.com.br" target="blank">
@@ -261,75 +289,34 @@ function Footer() {
               </a>
               <H3 style={{ marginTop: '80px' }}>Redes sociais:</H3>
               <Flex style={{ gap: '24px', flexDirection: 'row' }}>
-                <a
-                  href="https://www.facebook.com/cannect.life/"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <img
-                    alt="logo-facebook"
-                    src="https://www.cannect.life/static/media/facebook-logo.c6c81a5e00e1ebe4e49daec74a5f6e44.svg"
-                  />
-                </a>
-                <a href="https://twitter.com/CannectLife" rel="noreferrer" target="_blank">
-                  <img
-                    alt="logo-twitter"
-                    src="https://www.cannect.life/static/media/twitter-logo.56fb2de8cc996a27c9914596673f0e42.svg"
-                  />
-                </a>
-                <a
-                  href="https://www.instagram.com/cannect.life/"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <img
-                    alt="logo-instagram"
-                    src="https://www.cannect.life/static/media/instagram-logo.09c8d34f4a9b80efeb3976e293564e74.svg"
-                  />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/cannect-saude/"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <img
-                    alt="logo-linkedin"
-                    src="https://www.cannect.life/static/media/linkedin-logo.624c549ae048291a7247c0a78140c7c9.svg"
-                  />
-                </a>
-                <a
-                  href="https://www.youtube.com/channel/UCElbcDDl-LIQCnag26MmyIg/"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <img
-                    alt="logo-youtube"
-                    src="https://www.cannect.life/static/media/youtubeIcon.2f0e6ba9075cbb23f54ba734b7de5e0f.svg"
-                  />
-                </a>
+                {socialMediaLinks.map((link, index) => (
+                  <a key={index} href={link.href} rel="noreferrer" target="_blank">
+                    <img alt={link.alt} src={link.src} />
+                  </a>
+                ))}
               </Flex>
             </div>
-          </ColumnFooter>
+          </Column>
         </Row>
         <Row style={{ marginTop: '64px' }}>
-          <ColumnFooter $sm="12" $md="12" $lg="4" style={{ alignSelf: 'center' }}>
+          <Column $sm="12" $md="12" $lg="4" style={{ alignSelf: 'center' }}>
             <Paragraph>
               CANNECT SERVIÇOS DE INTERNET S/A - CNPJ: 41.418.943/0001-16 R. Dr. Renato Paes de
               Barros, 33 - Itaim Bibi, São Paulo - SP, 04530-000
             </Paragraph>
-          </ColumnFooter>
-          <ColumnFooter $sm="12" $md="12" $lg="5" className="method-payment">
+          </Column>
+          <Column $sm="12" $md="12" $lg="5" className="method-payment">
             <Paragraph style={{ marginBottom: '14px' }}>Meios de pagamento</Paragraph>
             <img
               alt="meios de pagamento"
               src={Payments}
               style={{ height: 'fit-content', paddingLeft: '10px' }}
             />
-          </ColumnFooter>
-          <ColumnFooter $sm="12" $md="12" $lg="3">
+          </Column>
+          <Column $sm="12" $md="12" $lg="3">
             <Paragraph>Fazemos parte do programa</Paragraph>
             <img alt="endeavor logo" src={Endeavor} />
-          </ColumnFooter>
+          </Column>
         </Row>
       </Root>
     </>

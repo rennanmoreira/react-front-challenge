@@ -10,11 +10,9 @@ const Card = ({ alt, src, toPath }) => {
   return (
     <>
       <Root>
-        <header></header>
         <Link to={toPath}>
           <img alt={alt} src={src} />
         </Link>
-        <footer></footer>
       </Root>
     </>
   )

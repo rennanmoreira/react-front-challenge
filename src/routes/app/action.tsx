@@ -1,8 +1,7 @@
 import { redirect } from 'react-router-dom'
-import { createContact } from '../../services/contacts'
 
 export async function action() {
-  const contact = await createContact()
+  const contact = { id: 1, name: 'teste' }
 
   return redirect(`/contacts/${contact.id}/edit`)
 }

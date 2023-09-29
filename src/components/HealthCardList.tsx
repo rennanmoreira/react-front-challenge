@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Flex, H3, Paragraph } from '../styled.css.ts'
-import Tilt from 'react-parallax-tilt';
+import { Flex, H3, Paragraph } from './styled.css.ts'
+import Tilt from 'react-parallax-tilt'
 
 export const RootCard = styled(Flex)`
   padding: 22px 14px;
@@ -31,13 +31,13 @@ export const RootCard = styled(Flex)`
 export const HealthCard = (props) => {
   return (
     <>
-    <Tilt tiltReverse={true}>
-      <RootCard>
-        <img alt={props.alt} src={props.src} />
-        <H3>{props.title}</H3>
-        <Paragraph>{props.children}</Paragraph>
-      </RootCard>
-    </Tilt>
+      <Tilt tiltReverse={true}>
+        <RootCard>
+          <img alt={props.alt} src={props.src} />
+          <H3>{props.title}</H3>
+          <Paragraph>{props.children}</Paragraph>
+        </RootCard>
+      </Tilt>
     </>
   )
 }

@@ -1,5 +1,5 @@
-import { prefix } from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const theme = {
   light: 'white',
@@ -95,7 +95,8 @@ export const Row = styled(Flex)<FlexOptions>`
   padding: 10px;
 `
 
-const columnSizePercent = (size: string | undefined, base: number = 12) => size && (parseInt(size) / base) * 100 + '%'
+const columnSizePercent = (size: string | undefined, base: number = 12) =>
+  size && (parseInt(size) / base) * 100 + '%'
 
 export const Column = styled(Flex)<ColumnOptions>`
   --flex-span: ${(p) => columnSizePercent(p.$span, p.$base) ?? 'auto'};
@@ -202,10 +203,10 @@ export const H2 = styled.h2`
   }
 
   @media (min-width: 900px) and (max-width: 1249px) {
-    font-size: 45px;
+    font-size: 40px;
 
     &.bigger {
-      font-size: 42px;
+      font-size: 40px;
       margin-bottom: 42px;
     }
   }
@@ -253,4 +254,71 @@ export const Paragraph = styled.p`
       font-size: 16px;
     }
   }
+`
+
+export const PageWrapper = styled.div`
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+`
+
+export const PageContent = styled.div`
+  width: 100%;
+  max-width: 1440px;
+`
+
+export const Section = styled.section`
+  padding: 64px 48px 58px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    padding: 64px 30px 30px;
+  }
+`
+
+export const TextSection = styled.div`
+  max-width: 725px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+`
+
+export const ButtonsContainer = styled.div`
+  gap: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+  text-decoration: none;
+`
+
+export const CustomLink = styled(Link)`
+  transition: all 0.3s ease 0s;
+  margin-top: 28px;
+  font-size: 20px;
+  text-align: start;
+  color: rgb(69, 121, 255);
+
+  &:hover {
+    transform: scale(1.04) translateX(12px);
+  }
+`
+
+export const BannerSection = styled.div`
+  display: flex;
+  align-items: flex-start;
+`
+
+export const BannerImage = styled.img`
+  max-inline-size: 100%;
+  block-size: auto;
+  height: auto;
+  object-fit: contain;
+  min-width: min-content;
 `

@@ -4,8 +4,9 @@ a {
   font-size: 15px;
   color: rgb(61, 61, 61);
   font-weight: 500;
+  z-index: 200;
 
-  &:hover {
+  .menu-links > &:hover {
     text-decoration: underline;
     color: rgb(62, 175, 136);
   }

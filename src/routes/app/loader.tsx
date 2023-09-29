@@ -1,6 +1,4 @@
-import { getContacts } from '../../services/contacts'
-
 export async function loader() {
-  const contacts = await getContacts()
+  const contacts = { id: 1, name: 'teste' }
   return { contacts }
 }

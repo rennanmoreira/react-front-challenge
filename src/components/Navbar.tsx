@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Flex } from '../styled.css.ts'
+import { Flex } from './styled.css.ts'
 import Logo from '@/assets/logo-cannect.svg'
 import LoginUserIcon from '@/assets/login-user.svg'
 import MenuIcon from '@/assets/menu.svg'
-import navbarStyles from '@/assets/styles/navbar.scss?inline'
+import navbarStyles from '@/styles/navbar.scss?inline'
 
 const LoginButton = styled.span`
   font-family: ITC Avant Garde Gothic Std;

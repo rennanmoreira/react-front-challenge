@@ -122,6 +122,12 @@ span {
   -webkit-box-align: center;
   align-items: center;
 
+  @media (max-width: 1249px) {
+    img {
+      width: 333px;
+    }
+  }
+
   @media (max-width: 900px) {
     padding: 48px 30px;
 

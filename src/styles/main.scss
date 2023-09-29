@@ -1,4 +1,4 @@
-@import url(@/assets/styles/fonts.scss);
+@import url(@/styles/fonts.scss);
 
 :root {
   color-scheme: light;
@@ -63,15 +63,28 @@ body {
   filter: blur(80px);
 }
 
+header::after {
+  content: '';
+  position: absolute;
+  border-radius: 0px 0px 100%;
+  background-color: rgb(120, 216, 183);
+  width: 60%;
+  height: 20px;
+  transform: translate(0px, 20px) scale(1.2);
+  z-index: 150;
+  opacity: 0.6;
+  filter: blur(50px);
+  top: -30px;
+}
+
 #section-welcome::before {
   left: 0px;
   top: 0px;
-  opacity: 0.2;
 }
 .page-content::after {
   right: -200px;
   bottom: -250px;
-  opacity: 0.15;
+  opacity: 0.05;
 }
 
 @media (min-width: 320px) and (max-width: 667px) {
